@@ -1,0 +1,11 @@
+{
+  "name": "vin-decoder-br",
+  "version": "0.1.0",
+  "description": "VIN decoder for Brazilian vehicles",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Daniel Roberto",
+  "license": "MIT"
+}
