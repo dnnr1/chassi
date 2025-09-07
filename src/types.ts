@@ -29,3 +29,13 @@ export interface VinValidationResult {
   errors: VinValidationError[];
   details: VinValidationDetails;
 }
+
+/**
+ * Manufacturer information decoded from WMI
+ */
+export interface ManufacturerInfo {
+  wmi: string;
+  manufacturer: string;
+  country: string;
+  countryCode: string;
+}
