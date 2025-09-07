@@ -39,3 +39,13 @@ export interface ManufacturerInfo {
   country: string;
   countryCode: string;
 }
+
+/**
+ * Year information decoded from VIN
+ */
+export interface YearInfo {
+  code: string;
+  possibleYears: number[];
+  mostLikelyYear: number | null;
+  confidence: number;
+}
