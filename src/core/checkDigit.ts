@@ -7,7 +7,7 @@ const TRANSLITERATION: Record<string, number> = {
 const WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
 
 /**
- * Transliterates a character to its numeric value
+ * Transliterates a character to its numeric value per ISO 3779
  */
 export function transliterateChar(char: string): number | null {
   const c = char.toUpperCase();
@@ -32,4 +32,22 @@ export function calculateCheckDigit(vin: string): string | null {
   
   const remainder = sum % 11;
   return remainder === 10 ? 'X' : remainder.toString();
+}
+
+/**
+ * Verifies if the check digit in a VIN is correct
+ */
+export function verifyCheckDigit(vin: string): boolean {
+  if (vin.length !== 17) return false;
+  const calculated = calculateCheckDigit(vin);
+  if (calculated === null) return false;
+  return vin[8].toUpperCase() === calculated;
+}
+
+/**
+ * Extracts the check digit from a VIN
+ */
+export function extractCheckDigit(vin: string): string | null {
+  if (vin.length < 9) return null;
+  return vin[8].toUpperCase();
 }
