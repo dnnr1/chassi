@@ -22,10 +22,12 @@ export function transliterateChar(char: string): number | null {
 export function calculateCheckDigit(vin: string): string | null {
   if (vin.length !== 17) return null;
   
+  const normalized = vin.toUpperCase();
   let sum = 0;
+  
   for (let i = 0; i < 17; i++) {
     if (i === 8) continue;
-    const value = transliterateChar(vin[i]);
+    const value = transliterateChar(normalized[i]);
     if (value === null) return null;
     sum += value * WEIGHTS[i];
   }
@@ -39,9 +41,11 @@ export function calculateCheckDigit(vin: string): string | null {
  */
 export function verifyCheckDigit(vin: string): boolean {
   if (vin.length !== 17) return false;
-  const calculated = calculateCheckDigit(vin);
+  const normalized = vin.toUpperCase();
+  const calculated = calculateCheckDigit(normalized);
   if (calculated === null) return false;
-  return vin[8].toUpperCase() === calculated;
+  const provided = normalized[8];
+  return provided === calculated || (provided === 'X' && calculated === 'X');
 }
 
 /**
