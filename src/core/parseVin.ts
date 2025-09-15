@@ -32,3 +32,12 @@ export function parseVin(vin: string): VinComponents | null {
     sequentialNumber: normalized.substring(11, 17)
   };
 }
+
+/**
+ * Extracts the World Manufacturer Identifier (positions 1-3)
+ */
+export function extractWmi(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 3) return null;
+  return normalized.substring(0, 3);
+}
