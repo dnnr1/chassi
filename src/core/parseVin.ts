@@ -41,3 +41,12 @@ export function extractWmi(vin: string): string | null {
   if (normalized.length < 3) return null;
   return normalized.substring(0, 3);
 }
+
+/**
+ * Extracts the Vehicle Descriptor Section (positions 4-9)
+ */
+export function extractVds(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 9) return null;
+  return normalized.substring(3, 9);
+}
