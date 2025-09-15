@@ -50,3 +50,12 @@ export function extractVds(vin: string): string | null {
   if (normalized.length < 9) return null;
   return normalized.substring(3, 9);
 }
+
+/**
+ * Extracts the Vehicle Identifier Section (positions 10-17)
+ */
+export function extractVis(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 17) return null;
+  return normalized.substring(9, 17);
+}
