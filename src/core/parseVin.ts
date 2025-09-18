@@ -59,3 +59,30 @@ export function extractVis(vin: string): string | null {
   if (normalized.length < 17) return null;
   return normalized.substring(9, 17);
 }
+
+/**
+ * Extracts the year code (position 10)
+ */
+export function extractYearCode(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 10) return null;
+  return normalized[9];
+}
+
+/**
+ * Extracts the plant code (position 11)
+ */
+export function extractPlantCode(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 11) return null;
+  return normalized[10];
+}
+
+/**
+ * Extracts the sequential number (positions 12-17)
+ */
+export function extractSequentialNumber(vin: string): string | null {
+  const normalized = normalizeVin(vin);
+  if (normalized.length < 17) return null;
+  return normalized.substring(11, 17);
+}
