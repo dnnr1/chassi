@@ -11,6 +11,12 @@
       "CA11": { "model": "Virtus", "confidence": 0.8 },
       "CA21": { "model": "Polo", "confidence": 0.8 },
       "BU2": { "model": "T-Cross", "confidence": 0.8 }
+    },
+    "9BG": {
+      "JB": { "model": "Onix", "confidence": 0.75 },
+      "JC": { "model": "Onix Plus", "confidence": 0.75 },
+      "RJ": { "model": "Tracker", "confidence": 0.8 },
+      "SK": { "model": "S10", "confidence": 0.8 }
     }
   }
 }
