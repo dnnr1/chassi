@@ -5,7 +5,12 @@
   },
   "patterns": {
     "9BW": {
-      "ZZZ37": { "model": "Gol" }
+      "ZZZ37": { "model": "Gol", "confidence": 0.8 },
+      "ZZZ6R": { "model": "Fox", "confidence": 0.8 },
+      "2G1": { "model": "Saveiro", "confidence": 0.75 },
+      "CA11": { "model": "Virtus", "confidence": 0.8 },
+      "CA21": { "model": "Polo", "confidence": 0.8 },
+      "BU2": { "model": "T-Cross", "confidence": 0.8 }
     }
   }
 }
