@@ -1,0 +1,11 @@
+{
+  "metadata": {
+    "description": "VDS patterns for model inference",
+    "note": "Unofficial data based on observed patterns"
+  },
+  "patterns": {
+    "9BW": {
+      "ZZZ37": { "model": "Gol" }
+    }
+  }
+}
