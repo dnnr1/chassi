@@ -24,6 +24,12 @@
       "225": { "model": "Mobi", "confidence": 0.8 },
       "323": { "model": "Toro", "confidence": 0.8 },
       "372": { "model": "Strada", "confidence": 0.8 }
+    },
+    "93H": {
+      "FB2": { "model": "Civic", "confidence": 0.8 },
+      "GK5": { "model": "Fit", "confidence": 0.8 },
+      "RU": { "model": "HR-V", "confidence": 0.8 },
+      "CR": { "model": "CR-V", "confidence": 0.8 }
     }
   }
 }
