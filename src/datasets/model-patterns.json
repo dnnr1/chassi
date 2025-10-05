@@ -36,6 +36,12 @@
       "C7": { "model": "Corolla Cross", "confidence": 0.8 },
       "FZ": { "model": "Hilux", "confidence": 0.8 },
       "KA": { "model": "Yaris", "confidence": 0.8 }
+    },
+    "93Y": {
+      "B4A": { "model": "Kwid", "confidence": 0.8 },
+      "HJD": { "model": "Duster", "confidence": 0.8 },
+      "RFB": { "model": "Sandero", "confidence": 0.8 },
+      "HHA": { "model": "Captur", "confidence": 0.8 }
     }
   }
 }
