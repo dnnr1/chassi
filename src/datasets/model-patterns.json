@@ -30,6 +30,12 @@
       "GK5": { "model": "Fit", "confidence": 0.8 },
       "RU": { "model": "HR-V", "confidence": 0.8 },
       "CR": { "model": "CR-V", "confidence": 0.8 }
+    },
+    "9BR": {
+      "53": { "model": "Corolla", "confidence": 0.8 },
+      "C7": { "model": "Corolla Cross", "confidence": 0.8 },
+      "FZ": { "model": "Hilux", "confidence": 0.8 },
+      "KA": { "model": "Yaris", "confidence": 0.8 }
     }
   }
 }
