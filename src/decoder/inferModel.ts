@@ -26,20 +26,27 @@ export function inferModel(wmi: string, vds: string): ModelInference {
     return { model: null, confidence: 0, source: 'inferred' };
   }
   
-  // Sort patterns by length (longer = more specific = higher priority)
+  // Sort patterns by length descending (longer = more specific = higher priority)
   const sortedPatterns = Object.entries(wmiPatterns)
     .sort((a, b) => b[0].length - a[0].length);
   
-  // Try to find matching pattern
+  let bestMatch: { pattern: string; data: ModelPattern } | null = null;
+  
   for (const [pattern, data] of sortedPatterns) {
     if (normalizedVds.startsWith(pattern)) {
-      return {
-        model: data.model,
-        confidence: data.confidence,
-        source: 'inferred',
-        matchedPattern: pattern
-      };
+      if (!bestMatch || pattern.length > bestMatch.pattern.length) {
+        bestMatch = { pattern, data };
+      }
     }
+  }
+  
+  if (bestMatch) {
+    return {
+      model: bestMatch.data.model,
+      confidence: bestMatch.data.confidence,
+      source: 'inferred',
+      matchedPattern: bestMatch.pattern
+    };
   }
   
   return { model: null, confidence: 0, source: 'inferred' };
@@ -58,4 +65,12 @@ export function listKnownModels(wmi: string): string[] {
     models.add(data.model);
   }
   return Array.from(models).sort();
+}
+
+/**
+ * Checks if WMI has any patterns
+ */
+export function hasModelPatterns(wmi: string): boolean {
+  const normalizedWmi = wmi.toUpperCase();
+  return patterns[normalizedWmi] !== undefined;
 }
