@@ -5,7 +5,7 @@ interface ModelPattern {
   confidence: number;
 }
 
-interface ModelInference {
+export interface ModelInference {
   model: string | null;
   confidence: number;
   source: string;
@@ -26,8 +26,12 @@ export function inferModel(wmi: string, vds: string): ModelInference {
     return { model: null, confidence: 0, source: 'inferred' };
   }
   
+  // Sort patterns by length (longer = more specific = higher priority)
+  const sortedPatterns = Object.entries(wmiPatterns)
+    .sort((a, b) => b[0].length - a[0].length);
+  
   // Try to find matching pattern
-  for (const [pattern, data] of Object.entries(wmiPatterns)) {
+  for (const [pattern, data] of sortedPatterns) {
     if (normalizedVds.startsWith(pattern)) {
       return {
         model: data.model,
@@ -39,4 +43,19 @@ export function inferModel(wmi: string, vds: string): ModelInference {
   }
   
   return { model: null, confidence: 0, source: 'inferred' };
+}
+
+/**
+ * Lists all known models for a WMI
+ */
+export function listKnownModels(wmi: string): string[] {
+  const normalizedWmi = wmi.toUpperCase();
+  const wmiPatterns = patterns[normalizedWmi];
+  if (!wmiPatterns) return [];
+  
+  const models = new Set<string>();
+  for (const data of Object.values(wmiPatterns)) {
+    models.add(data.model);
+  }
+  return Array.from(models).sort();
 }
