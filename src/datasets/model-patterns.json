@@ -133,6 +133,20 @@
                                               "model":  "HB20",
                                               "confidence":  0.8
                                           }
+                             },
+                     "9BJ":  {
+                                 "MP":  {
+                                            "model":  "Compass",
+                                            "confidence":  0.8
+                                        },
+                                 "M6":  {
+                                            "model":  "Commander",
+                                            "confidence":  0.8
+                                        },
+                                 "BU":  {
+                                            "model":  "Renegade",
+                                            "confidence":  0.8
+                                        }
                              }
                  }
 }
