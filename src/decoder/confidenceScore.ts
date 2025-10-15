@@ -24,3 +24,19 @@ export function calculateConfidenceScore(factors: {
   
   return Math.round((score / total) * 100) / 100;
 }
+
+/**
+ * Calculates confidence for year based on possible years
+ */
+export function calculateYearConfidence(possibleYears: number[]): number {
+  if (possibleYears.length === 0) return 0;
+  if (possibleYears.length === 1) return 1;
+  
+  const currentYear = new Date().getFullYear();
+  const validYears = possibleYears.filter(y => y <= currentYear + 1);
+  
+  if (validYears.length === 1) return 0.9;
+  if (validYears.length === 2) return 0.5;
+  
+  return 0.3;
+}
