@@ -40,3 +40,24 @@ export function calculateYearConfidence(possibleYears: number[]): number {
   
   return 0.3;
 }
+
+/**
+ * Calculates confidence for model inference
+ */
+export function calculateModelConfidence(
+  matchedPattern: string | undefined,
+  vds: string
+): number {
+  if (!matchedPattern) return 0;
+  
+  const patternLength = matchedPattern.length;
+  const vdsLength = vds.length;
+  
+  let score = patternLength / vdsLength * 0.8;
+  
+  if (patternLength === vdsLength) {
+    score += 0.2;
+  }
+  
+  return Math.min(1, Math.round(score * 100) / 100);
+}
