@@ -1,4 +1,11 @@
 /**
+ * Rounds a number to 2 decimal places
+ */
+function round2(n: number): number {
+  return Math.round(n * 100) / 100;
+}
+
+/**
  * Calculates overall confidence score for VIN decode result
  */
 export function calculateConfidenceScore(factors: {
@@ -22,7 +29,7 @@ export function calculateConfidenceScore(factors: {
   if (factors.isBrazilian) { score += 0.15; }
   total += 0.15;
   
-  return Math.round((score / total) * 100) / 100;
+  return round2(score / total);
 }
 
 /**
@@ -59,5 +66,22 @@ export function calculateModelConfidence(
     score += 0.2;
   }
   
-  return Math.min(1, Math.round(score * 100) / 100);
+  return Math.min(1, round2(score));
+}
+
+/**
+ * Combines multiple confidence scores
+ */
+export function combineConfidenceScores(scores: number[], weights?: number[]): number {
+  if (scores.length === 0) return 0;
+  
+  if (!weights || weights.length !== scores.length) {
+    return round2(scores.reduce((a, b) => a + b, 0) / scores.length);
+  }
+  
+  const totalWeight = weights.reduce((a, b) => a + b, 0);
+  if (totalWeight === 0) return 0;
+  
+  const weightedSum = scores.reduce((sum, score, i) => sum + score * weights[i], 0);
+  return round2(weightedSum / totalWeight);
 }
