@@ -1,9 +1,10 @@
 import wmiData from '../datasets/wmi-br.json';
 import yearData from '../datasets/year-map.json';
 import { ManufacturerInfo, YearInfo } from '../types';
-import { parseVin } from '../core/parseVin';
+import { VinComponents, parseVin } from '../core/parseVin';
 import { verifyCheckDigit } from '../core/checkDigit';
 import { inferModel, ModelInference } from './inferModel';
+import { calculateConfidenceScore } from './confidenceScore';
 
 const wmiDatabase = wmiData as Record<string, { manufacturer: string; country: string; countryCode: string }>;
 const yearCodes = (yearData as any).codes as Record<string, number[]>;
@@ -19,9 +20,14 @@ export interface VinDecodeResult {
   manufacturer: string | null;
   country: string | null;
   year: number | null;
+  possibleYears?: number[];
   model: string | null;
   confidence: number;
+  components?: VinComponents;
+  disclaimer: string;
 }
+
+const DISCLAIMER = "The returned data is inferred and unofficial. Always verify with official sources.";
 
 /**
  * Decodes manufacturer from WMI
@@ -66,6 +72,14 @@ export function decodeYear(yearCode: string, seventhChar?: string): YearInfo {
 }
 
 /**
+ * Checks if VIN is Brazilian
+ */
+export function isBrazilianVin(vin: string): boolean {
+  if (vin.length < 1) return false;
+  return vin[0] === '9';
+}
+
+/**
  * Decodes a VIN
  */
 export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeResult {
@@ -79,7 +93,8 @@ export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeRe
       country: null,
       year: null,
       model: null,
-      confidence: 0
+      confidence: 0,
+      disclaimer: DISCLAIMER
     };
   }
   
@@ -92,7 +107,8 @@ export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeRe
       country: null,
       year: null,
       model: null,
-      confidence: 0
+      confidence: 0,
+      disclaimer: DISCLAIMER
     };
   }
   
@@ -100,13 +116,28 @@ export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeRe
   const yearInfo = decodeYear(parsed.yearCode, parsed.vds[3]);
   const modelInfo = inferModel(parsed.wmi, parsed.vds);
   
-  return {
+  const confidence = calculateConfidenceScore({
+    vinValid: true,
+    wmiFound: manufacturerInfo !== null,
+    vdsPatternFound: modelInfo.model !== null,
+    isBrazilian: isBrazilianVin(vin)
+  });
+  
+  const result: VinDecodeResult = {
     vin,
     valid: true,
     manufacturer: manufacturerInfo?.manufacturer || null,
     country: manufacturerInfo?.country || null,
     year: yearInfo.mostLikelyYear,
+    possibleYears: yearInfo.possibleYears,
     model: modelInfo.model,
-    confidence: 0.8
+    confidence,
+    disclaimer: DISCLAIMER
   };
+  
+  if (options.includeComponents) {
+    result.components = parsed;
+  }
+  
+  return result;
 }
