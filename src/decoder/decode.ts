@@ -141,3 +141,4 @@ export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeRe
   
   return result;
 }
+
