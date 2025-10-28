@@ -142,3 +142,19 @@ export function decodeVin(vin: string, options: DecodeOptions = {}): VinDecodeRe
   return result;
 }
 
+export function listKnownManufacturers(country?: string): ManufacturerInfo[] {
+  const manufacturers: ManufacturerInfo[] = [];
+  
+  for (const [wmi, data] of Object.entries(wmiDatabase)) {
+    if (!country || data.country.toLowerCase() === country.toLowerCase()) {
+      manufacturers.push({
+        wmi,
+        manufacturer: data.manufacturer,
+        country: data.country,
+        countryCode: data.countryCode
+      });
+    }
+  }
+  
+  return manufacturers;
+}
