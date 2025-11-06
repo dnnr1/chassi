@@ -6,7 +6,7 @@ import { verifyCheckDigit } from '../core/checkDigit';
 
 const args = process.argv.slice(2);
 const command = args[0];
-const vin = args[1];
+const vin = args[1]?.toUpperCase();
 
 function showHelp() {
   console.log('chassi - VIN Decoder for Brazilian vehicles');
@@ -49,3 +49,4 @@ switch (command) {
     showHelp();
     process.exit(1);
 }
+
