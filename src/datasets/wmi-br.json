@@ -1,16 +1,77 @@
 {
-  "9BW": { "manufacturer": "Volkswagen", "country": "Brasil", "countryCode": "BR" },
-  "9BG": { "manufacturer": "Chevrolet (General Motors)", "country": "Brasil", "countryCode": "BR" },
-  "9BD": { "manufacturer": "Fiat", "country": "Brasil", "countryCode": "BR" },
-  "93H": { "manufacturer": "Honda", "country": "Brasil", "countryCode": "BR" },
-  "9BR": { "manufacturer": "Toyota", "country": "Brasil", "countryCode": "BR" },
-  "93Y": { "manufacturer": "Renault", "country": "Brasil", "countryCode": "BR" },
-  "93W": { "manufacturer": "Hyundai (CAOA)", "country": "Brasil", "countryCode": "BR" },
-  "9BJ": { "manufacturer": "Jeep", "country": "Brasil", "countryCode": "BR" },
-  "9BF": { "manufacturer": "Ford", "country": "Brasil", "countryCode": "BR" },
-  "WVW": { "manufacturer": "Volkswagen", "country": "Alemanha", "countryCode": "DE" },
-  "WBA": { "manufacturer": "BMW", "country": "Alemanha", "countryCode": "DE" },
-  "WDB": { "manufacturer": "Mercedes-Benz", "country": "Alemanha", "countryCode": "DE" },
-  "5YJ": { "manufacturer": "Tesla", "country": "Estados Unidos", "countryCode": "US" },
-  "1G1": { "manufacturer": "Chevrolet", "country": "Estados Unidos", "countryCode": "US" }
+    "9BW":  {
+                "manufacturer":  "Volkswagen",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "9BG":  {
+                "manufacturer":  "Chevrolet (General Motors)",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "9BD":  {
+                "manufacturer":  "Fiat",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "93H":  {
+                "manufacturer":  "Honda",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "9BR":  {
+                "manufacturer":  "Toyota",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "93Y":  {
+                "manufacturer":  "Renault",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "93W":  {
+                "manufacturer":  "Hyundai (CAOA)",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "9BJ":  {
+                "manufacturer":  "Jeep",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "9BF":  {
+                "manufacturer":  "Ford",
+                "country":  "Brasil",
+                "countryCode":  "BR"
+            },
+    "WVW":  {
+                "manufacturer":  "Volkswagen",
+                "country":  "Alemanha",
+                "countryCode":  "DE"
+            },
+    "WBA":  {
+                "manufacturer":  "BMW",
+                "country":  "Alemanha",
+                "countryCode":  "DE"
+            },
+    "WDB":  {
+                "manufacturer":  "Mercedes-Benz",
+                "country":  "Alemanha",
+                "countryCode":  "DE"
+            },
+    "5YJ":  {
+                "manufacturer":  "Tesla",
+                "country":  "Estados Unidos",
+                "countryCode":  "US"
+            },
+    "1G1":  {
+                "manufacturer":  "Chevrolet",
+                "country":  "Estados Unidos",
+                "countryCode":  "US"
+            },
+    "9BS":  {
+                "manufacturer":  "Scania",
+                "countryCode":  "BR",
+                "country":  "Brasil"
+            }
 }
