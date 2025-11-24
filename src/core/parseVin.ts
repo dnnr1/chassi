@@ -86,3 +86,14 @@ export function extractSequentialNumber(vin: string): string | null {
   if (normalized.length < 17) return null;
   return normalized.substring(11, 17);
 }
+/**
+ * Reconstructs a VIN from components
+ */
+export function reconstructVin(components: Partial<VinComponents>): string | null {
+  if (!components.wmi || !components.vds || !components.vis) return null;
+  if (components.wmi.length !== 3) return null;
+  if (components.vds.length !== 6) return null;
+  if (components.vis.length !== 8) return null;
+  
+  return components.wmi + components.vds + components.vis;
+}
