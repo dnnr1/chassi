@@ -158,3 +158,12 @@ export function listKnownManufacturers(country?: string): ManufacturerInfo[] {
   
   return manufacturers;
 }
+export function decodeVinBasic(vin: string) {
+  const result = decodeVin(vin);
+  return {
+    manufacturer: result.manufacturer,
+    country: result.country,
+    year: result.year,
+    model: result.model
+  };
+}
