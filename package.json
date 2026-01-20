@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "pnpm exec jest"
   },
   "devDependencies": {
     "jest": "^29.7.0",
