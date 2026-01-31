@@ -13,7 +13,8 @@ import { normalizeVin } from "../core/validateVin";
 import { inferModel } from "./inferModel";
 import { calculateConfidenceScore } from "./confidenceScore";
 
-const wmiDatabase = wmiData as Record<
+const { _metadata, ...wmiEntries } = wmiData as any;
+const wmiDatabase = wmiEntries as Record<
   string,
   { manufacturer: string; country: string; countryCode: string }
 >;

@@ -1,4 +1,32 @@
 {
+  "_metadata": {
+    "description": "World Manufacturer Identifier (WMI) codes for Brazilian and international vehicles",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-31",
+    "sources": [
+      {
+        "name": "ISO 3779:2009",
+        "description": "Road vehicles — Vehicle identification number (VIN)",
+        "url": "https://www.iso.org/standard/52200.html"
+      },
+      {
+        "name": "SAE J853",
+        "description": "Vehicle Identification Number Systems",
+        "url": "https://www.sae.org/standards/content/j853_201511/"
+      },
+      {
+        "name": "NHTSA VIN Decoder",
+        "description": "National Highway Traffic Safety Administration",
+        "url": "https://vpic.nhtsa.dot.gov/decoder/"
+      },
+      {
+        "name": "DENATRAN/SENATRAN",
+        "description": "Departamento Nacional de Trânsito - Brasil",
+        "url": "https://www.gov.br/senatran/"
+      }
+    ],
+    "disclaimer": "WMI codes are assigned by SAE International. This dataset may not be complete. For official data, consult SAE or your local vehicle registration authority."
+  },
   "9BW": {
     "manufacturer": "Volkswagen",
     "country": "Brasil",

@@ -1,8 +1,25 @@
 {
   "metadata": {
-    "description": "VDS patterns for vehicle model inference",
-    "source": "Unofficial - based on observed patterns",
-    "disclaimer": "This data is not official. Always verify with manufacturer."
+    "description": "VDS (Vehicle Descriptor Section) patterns for model inference",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-31",
+    "sources": [
+      {
+        "name": "Observational Analysis",
+        "description": "Patterns identified from public VIN databases and vehicle registrations"
+      },
+      {
+        "name": "Manufacturer Documentation",
+        "description": "Technical documentation from vehicle manufacturers"
+      },
+      {
+        "name": "NHTSA vPIC",
+        "description": "Vehicle Product Information Catalog",
+        "url": "https://vpic.nhtsa.dot.gov/"
+      }
+    ],
+    "disclaimer": "Model inference is based on observed patterns and is NOT official. VDS encoding varies by manufacturer and may change between model years. Always verify with the manufacturer or official documentation for critical applications.",
+    "accuracy": "Patterns are community-sourced and may contain errors. Confidence scores reflect pattern reliability."
   },
   "patterns": {
     "9BW": {

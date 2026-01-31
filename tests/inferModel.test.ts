@@ -91,7 +91,8 @@ describe("getModelPatternsMetadata", () => {
     const metadata = getModelPatternsMetadata();
     expect(metadata).not.toBeNull();
     expect(metadata.description).toBeDefined();
-    expect(metadata.source).toBeDefined();
+    expect(metadata.sources).toBeDefined();
+    expect(Array.isArray(metadata.sources)).toBe(true);
     expect(metadata.disclaimer).toBeDefined();
   });
 });
