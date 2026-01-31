@@ -19,9 +19,6 @@ const wmiDatabase = wmiData as Record<
 >;
 const yearCodes = (yearData as any).codes as Record<string, number[]>;
 
-/**
- * Decodes manufacturer information from WMI
- */
 export function decodeManufacturer(wmi: string): ManufacturerInfo | null {
   const normalized = wmi.toUpperCase();
   const data = wmiDatabase[normalized];
@@ -47,9 +44,6 @@ export function decodeManufacturer(wmi: string): ManufacturerInfo | null {
   return null;
 }
 
-/**
- * Decodes year information from year code
- */
 export function decodeYear(yearCode: string, seventhChar?: string): YearInfo {
   const normalized = yearCode.toUpperCase();
   const years = yearCodes[normalized] || [];
@@ -81,18 +75,13 @@ export function decodeYear(yearCode: string, seventhChar?: string): YearInfo {
   };
 }
 
-/**
- * Checks if VIN is from a Brazilian manufacturer
- */
 export function isBrazilianVin(vin: string): boolean {
   const normalized = normalizeVin(vin);
   if (normalized.length < 1) return false;
   return normalized[0] === "9";
 }
 
-/**
- * Decodes a VIN with full information
- */
+/** Main decode function. Returns manufacturer, country, year, model and confidence. */
 export function decodeVin(
   vin: string,
   options: DecodeOptions = {},
@@ -162,9 +151,6 @@ export function decodeVin(
   return result;
 }
 
-/**
- * Decodes a VIN with basic information only
- */
 export function decodeVinBasic(vin: string): {
   manufacturer: string | null;
   country: string | null;
@@ -180,9 +166,6 @@ export function decodeVinBasic(vin: string): {
   };
 }
 
-/**
- * Lists all known manufacturers, optionally filtered by country
- */
 export function listKnownManufacturers(country?: string): ManufacturerInfo[] {
   const manufacturers: ManufacturerInfo[] = [];
 
