@@ -4,6 +4,7 @@ export {
   validateVin,
   isValidVin,
 } from "./core/validateVin";
+export type { ValidateVinOptions } from "./core/validateVin";
 
 export {
   calculateCheckDigit,
