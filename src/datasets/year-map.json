@@ -1,7 +1,25 @@
 {
   "metadata": {
-    "description": "Year codes per ISO 3779",
-    "note": "Years cycle every 30 years starting from 1980"
+    "description": "Model year codes as defined by ISO 3779 and 49 CFR Part 565",
+    "version": "1.0.0",
+    "lastUpdated": "2026-01-31",
+    "sources": [
+      {
+        "name": "ISO 3779:2009",
+        "description": "Road vehicles — Vehicle identification number (VIN) — Content and structure",
+        "url": "https://www.iso.org/standard/52200.html"
+      },
+      {
+        "name": "49 CFR § 565.15",
+        "description": "U.S. Code of Federal Regulations - Vehicle Identification Number content",
+        "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-565"
+      }
+    ],
+    "notes": [
+      "Year codes cycle every 30 years starting from 1980",
+      "Letters I, O, Q, U, Z and number 0 are excluded",
+      "Position 7 can help distinguish cycles: numeric = 2010+, alphabetic = 1980-2009"
+    ]
   },
   "codes": {
     "A": [1980, 2010],

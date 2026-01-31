@@ -64,12 +64,12 @@ export function hasModelPatterns(wmi: string): boolean {
 
 export function getModelPatternsMetadata(): {
   description: string;
-  source: string;
+  sources: Array<{ name: string; description: string; url?: string }>;
   disclaimer: string;
 } {
   return {
     description: (modelData as any).metadata.description,
-    source: (modelData as any).metadata.source,
+    sources: (modelData as any).metadata.sources,
     disclaimer: (modelData as any).metadata.disclaimer,
   };
 }

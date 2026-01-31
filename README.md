@@ -91,6 +91,26 @@ npx chassi validate 9BWZZZ377VT004251
 
 ## Data Sources
 
-- ISO 3779 standard
-- Brazilian DENATRAN
-- Manufacturer documentation
+### Standards
+
+| Standard                                                                            | Description                   |
+| ----------------------------------------------------------------------------------- | ----------------------------- |
+| [ISO 3779:2009](https://www.iso.org/standard/52200.html)                            | VIN content and structure     |
+| [ISO 3780:2009](https://www.iso.org/standard/52199.html)                            | WMI code assignment           |
+| [SAE J853](https://www.sae.org/standards/content/j853_201511/)                      | VIN systems specification     |
+| [49 CFR § 565](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-565) | U.S. federal VIN requirements |
+
+### Databases
+
+| Source                                            | Usage                             |
+| ------------------------------------------------- | --------------------------------- |
+| [NHTSA vPIC](https://vpic.nhtsa.dot.gov/decoder/) | WMI validation, manufacturer data |
+| [DENATRAN/SENATRAN](https://www.gov.br/senatran/) | Brazilian vehicle registration    |
+
+### Notes
+
+- **WMI codes**: Assigned by SAE International under ISO 3780
+- **Model patterns**: Community-sourced from observed VINs (not official)
+- **Year codes**: Defined by ISO 3779, cycle every 30 years
+
+> ⚠️ Model inference is approximate. Always verify with official sources for critical applications.
