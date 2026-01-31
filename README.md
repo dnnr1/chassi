@@ -1,3 +1,7 @@
+<p>
+  <img src="assets/images/chassi.png" alt="Decodificador de Chassi (VIN)" width="800" />
+</p>
+
 # chassi
 
 Offline VIN decoder for Brazilian vehicles.
