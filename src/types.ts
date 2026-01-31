@@ -9,6 +9,7 @@ export interface VinValidationDetails {
   lengthValid: boolean;
   charactersValid: boolean;
   checkDigitValid: boolean;
+  checkDigitApplicable?: boolean;
   providedCheckDigit?: string;
   calculatedCheckDigit?: string;
 }
