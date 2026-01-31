@@ -4,53 +4,36 @@ import {
   decodeVinBasic,
   decodeManufacturer,
   decodeYear,
-  isBrazilianVin,
   listKnownManufacturers,
 } from "../src/decoder/decode";
 
 describe("decodeManufacturer", () => {
-  describe("Brazilian manufacturers", () => {
-    const brazilianWmis: [string, string][] = [
-      ["9BW", "Volkswagen"],
-      ["9BG", "Chevrolet (General Motors)"],
-      ["9BD", "Fiat"],
-      ["93H", "Honda"],
-      ["9BF", "Ford"],
-      ["9BR", "Toyota"],
-      ["93Y", "Renault"],
-      ["9BJ", "Jeep"],
+  describe("manufacturers", () => {
+    const wmis: [string, string, string][] = [
+      ["9BW", "Volkswagen", "Brazil"],
+      ["9BG", "Chevrolet (General Motors)", "Brazil"],
+      ["9BD", "Fiat", "Brazil"],
+      ["93H", "Honda", "Brazil"],
+      ["9BF", "Ford", "Brazil"],
+      ["9BR", "Toyota", "Brazil"],
+      ["93Y", "Renault", "Brazil"],
+      ["9BJ", "Jeep", "Brazil"],
+      ["WVW", "Volkswagen", "Germany"],
+      ["WBA", "BMW", "Germany"],
+      ["WDB", "Mercedes-Benz", "Germany"],
+      ["1G1", "Chevrolet", "United States"],
+      ["5YJ", "Tesla", "United States"],
+      ["JHM", "Honda", "Japan"],
+      ["ZFF", "Ferrari", "Italy"],
     ];
 
-    brazilianWmis.forEach(([wmi, expected]) => {
-      it(`should identify ${expected} for WMI ${wmi}`, () => {
+    wmis.forEach(([wmi, manufacturer, country]) => {
+      it(`should identify ${manufacturer} (${country}) for WMI ${wmi}`, () => {
         const result = decodeManufacturer(wmi);
         expect(result).not.toBeNull();
-        expect(result!.manufacturer).toBe(expected);
-        expect(result!.country).toBe("Brasil");
+        expect(result!.manufacturer).toBe(manufacturer);
+        expect(result!.country).toBe(country);
       });
-    });
-  });
-
-  describe("international manufacturers", () => {
-    it("should decode Volkswagen Germany", () => {
-      const result = decodeManufacturer("WVW");
-      expect(result).not.toBeNull();
-      expect(result!.manufacturer).toBe("Volkswagen");
-      expect(result!.country).toBe("Alemanha");
-    });
-
-    it("should decode Mercedes-Benz", () => {
-      const result = decodeManufacturer("WDB");
-      expect(result).not.toBeNull();
-      expect(result!.manufacturer).toBe("Mercedes-Benz");
-      expect(result!.country).toBe("Alemanha");
-    });
-
-    it("should decode BMW", () => {
-      const result = decodeManufacturer("WBA");
-      expect(result).not.toBeNull();
-      expect(result!.manufacturer).toBe("BMW");
-      expect(result!.country).toBe("Alemanha");
     });
   });
 
@@ -120,39 +103,38 @@ describe("decodeYear", () => {
   });
 });
 
-describe("isBrazilianVin", () => {
-  it("should return true for Brazilian VINs (starting with 9)", () => {
-    expect(isBrazilianVin("9BWZZZ377VT004251")).toBe(true);
-    expect(isBrazilianVin("9BGZZZ377VT004251")).toBe(true);
-    expect(isBrazilianVin("93HGK5860SZ000123")).toBe(true);
-  });
-
-  it("should return false for non-Brazilian VINs", () => {
-    expect(isBrazilianVin("WVWZZZ3CZWE000001")).toBe(false);
-    expect(isBrazilianVin("1HGBH41JXMN109186")).toBe(false);
-  });
-});
-
 describe("decodeVin", () => {
-  describe("valid Brazilian VINs", () => {
-    it("should decode Volkswagen VIN", () => {
+  describe("valid VINs", () => {
+    it("should decode Volkswagen Brazil VIN", () => {
       const result = decodeVin("9BWZZZ377VT004251");
       expect(result.manufacturer).toBe("Volkswagen");
-      expect(result.country).toBe("Brasil");
+      expect(result.country).toBe("Brazil");
       expect(result.confidence).toBeGreaterThan(0);
       expect(result.disclaimer).toBeDefined();
     });
 
-    it("should decode Honda VIN", () => {
+    it("should decode Honda Brazil VIN", () => {
       const result = decodeVin("93HGK5860SZ000123");
       expect(result.manufacturer).toBe("Honda");
-      expect(result.country).toBe("Brasil");
+      expect(result.country).toBe("Brazil");
     });
 
-    it("should decode Fiat VIN", () => {
+    it("should decode Fiat Brazil VIN", () => {
       const result = decodeVin("9BD178226J0012345");
       expect(result.manufacturer).toBe("Fiat");
-      expect(result.country).toBe("Brasil");
+      expect(result.country).toBe("Brazil");
+    });
+
+    it("should decode Tesla US VIN", () => {
+      const result = decodeVin("5YJ3E1EA5LF123456");
+      expect(result.manufacturer).toBe("Tesla");
+      expect(result.country).toBe("United States");
+    });
+
+    it("should decode BMW Germany VIN", () => {
+      const result = decodeVin("WBAPK5C55BA123456");
+      expect(result.manufacturer).toBe("BMW");
+      expect(result.country).toBe("Germany");
     });
   });
 
@@ -197,9 +179,12 @@ describe("listKnownManufacturers", () => {
     expect(manufacturers.length).toBeGreaterThan(0);
   });
 
-  it("should include Brazilian manufacturers", () => {
-    const manufacturers = listKnownManufacturers("Brasil");
+  it("should filter by country", () => {
+    const manufacturers = listKnownManufacturers("Germany");
     expect(manufacturers.length).toBeGreaterThan(5);
+    manufacturers.forEach((m) => {
+      expect(m.country).toBe("Germany");
+    });
   });
 
   it("should have required properties", () => {

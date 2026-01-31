@@ -9,7 +9,7 @@ const command = args[0];
 const vin = args[1];
 
 function showHelp(): void {
-  console.log("chassi - VIN Decoder for Brazilian vehicles");
+  console.log("chassi - Offline VIN Decoder");
   console.log("");
   console.log("Usage: chassi <command> <vin>");
   console.log("");
@@ -21,8 +21,8 @@ function showHelp(): void {
   console.log("  help            Show this help message");
   console.log("");
   console.log("Examples:");
-  console.log("  chassi decode 9BWZZZ377VT004251");
-  console.log("  chassi validate 9BWZZZ377VT004251");
+  console.log("  chassi decode 1HGCG5655WA014582");
+  console.log("  chassi validate WVWZZZ3CZWE123456");
 }
 
 if (

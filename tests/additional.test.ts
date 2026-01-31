@@ -11,10 +11,16 @@ describe("Integration Tests", () => {
       {
         vin: "9BWZZZ377VT004251",
         manufacturer: "Volkswagen",
-        country: "Brasil",
+        country: "Brazil",
       },
-      { vin: "93HGK5860SZ000123", manufacturer: "Honda", country: "Brasil" },
-      { vin: "9BD178226J0012345", manufacturer: "Fiat", country: "Brasil" },
+      { vin: "93HGK5860SZ000123", manufacturer: "Honda", country: "Brazil" },
+      { vin: "9BD178226J0012345", manufacturer: "Fiat", country: "Brazil" },
+      { vin: "WBAPH5C55BA123456", manufacturer: "BMW", country: "Germany" },
+      {
+        vin: "1G1YY22G965123456",
+        manufacturer: "Chevrolet",
+        country: "United States",
+      },
     ];
 
     realWorldVins.forEach(({ vin, manufacturer, country }) => {

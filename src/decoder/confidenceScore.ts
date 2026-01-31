@@ -2,35 +2,29 @@ function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
 
-/** Weighted confidence: VIN valid (30%), WMI found (30%), VDS pattern (25%), Brazilian (15%). */
+/** Weighted confidence: VIN valid (35%), WMI found (35%), VDS pattern (30%). */
 export function calculateConfidenceScore(factors: {
   vinValid: boolean;
   wmiFound: boolean;
   vdsPatternFound: boolean;
-  isBrazilian: boolean;
 }): number {
   let score = 0;
   let total = 0;
 
   if (factors.vinValid) {
-    score += 0.3;
+    score += 0.35;
   }
-  total += 0.3;
+  total += 0.35;
 
   if (factors.wmiFound) {
+    score += 0.35;
+  }
+  total += 0.35;
+
+  if (factors.vdsPatternFound) {
     score += 0.3;
   }
   total += 0.3;
-
-  if (factors.vdsPatternFound) {
-    score += 0.25;
-  }
-  total += 0.25;
-
-  if (factors.isBrazilian) {
-    score += 0.15;
-  }
-  total += 0.15;
 
   return round2(score / total);
 }

@@ -1,4 +1,4 @@
-import wmiData from "../datasets/wmi-br.json";
+import wmiData from "../datasets/wmi.json";
 import yearData from "../datasets/year-map.json";
 import {
   ManufacturerInfo,
@@ -30,15 +30,6 @@ export function decodeManufacturer(wmi: string): ManufacturerInfo | null {
       manufacturer: data.manufacturer,
       country: data.country,
       countryCode: data.countryCode,
-    };
-  }
-
-  if (normalized.startsWith("9")) {
-    return {
-      wmi: normalized,
-      manufacturer: "Unknown",
-      country: "Brasil",
-      countryCode: "BR",
     };
   }
 
@@ -74,12 +65,6 @@ export function decodeYear(yearCode: string, seventhChar?: string): YearInfo {
     mostLikelyYear: mostLikely,
     confidence,
   };
-}
-
-export function isBrazilianVin(vin: string): boolean {
-  const normalized = normalizeVin(vin);
-  if (normalized.length < 1) return false;
-  return normalized[0] === "9";
 }
 
 /** Main decode function. Returns manufacturer, country, year, model and confidence. */
@@ -129,7 +114,6 @@ export function decodeVin(
     wmiFound:
       manufacturerInfo !== null && manufacturerInfo.manufacturer !== "Unknown",
     vdsPatternFound: modelInfo.model !== null,
-    isBrazilian: isBrazilianVin(vin),
   });
 
   const result: VinDecodeResult = {
