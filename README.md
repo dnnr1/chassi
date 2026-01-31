@@ -1,5 +1,9 @@
-<p>
-  <img src="assets/images/chassi.png" alt="Decodificador de Chassi (VIN)" width="800" />
+<p align="center">
+  <img
+    src="https://github.com/dnnr1/chassi/blob/master/assets/images/chassi.png?raw=true"
+    width="700"
+    alt="Decodificador de Chassi"
+  />
 </p>
 
 # chassi

@@ -20,6 +20,12 @@
   "bin": {
     "chassi": "./dist/cli/decode.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "assets"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "test": "pnpm exec jest"
