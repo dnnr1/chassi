@@ -13,7 +13,6 @@ describe("calculateConfidenceScore", () => {
         vinValid: true,
         wmiFound: true,
         vdsPatternFound: true,
-        isBrazilian: true,
       });
       expect(score).toBeGreaterThan(0.7);
       expect(score).toBeLessThanOrEqual(1);
@@ -24,7 +23,6 @@ describe("calculateConfidenceScore", () => {
         vinValid: false,
         wmiFound: true,
         vdsPatternFound: false,
-        isBrazilian: true,
       });
       expect(score).toBeLessThan(0.7);
     });
@@ -36,7 +34,6 @@ describe("calculateConfidenceScore", () => {
         vinValid: true,
         wmiFound: true,
         vdsPatternFound: false,
-        isBrazilian: true,
       });
       expect(score).toBeGreaterThan(0.4);
       expect(score).toBeLessThan(0.9);
@@ -47,7 +44,6 @@ describe("calculateConfidenceScore", () => {
         vinValid: true,
         wmiFound: false,
         vdsPatternFound: false,
-        isBrazilian: false,
       });
       expect(score).toBeLessThan(0.5);
     });
@@ -134,19 +130,16 @@ describe("confidence score ranges", () => {
         vinValid: true,
         wmiFound: true,
         vdsPatternFound: true,
-        isBrazilian: true,
       },
       {
         vinValid: false,
         wmiFound: false,
         vdsPatternFound: false,
-        isBrazilian: false,
       },
       {
         vinValid: true,
         wmiFound: false,
         vdsPatternFound: false,
-        isBrazilian: false,
       },
     ];
 

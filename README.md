@@ -2,13 +2,13 @@
   <img
     src="https://github.com/dnnr1/chassi/blob/master/assets/images/chassi.png?raw=true"
     width="700"
-    alt="Decodificador de Chassi"
+    alt="VIN Decoder"
   />
 </p>
 
 # chassi
 
-Offline VIN decoder for Brazilian vehicles.
+Offline VIN decoder library.
 
 ## Installation
 
@@ -23,32 +23,32 @@ npm install chassi
 ```typescript
 import { decodeVin, validateVin } from "chassi";
 
-decodeVin("9BWZZZ377VT004251");
+decodeVin("WVWZZZ3CZWE123456");
 // {
-//   vin: '9BWZZZ377VT004251',
+//   vin: 'WVWZZZ3CZWE123456',
 //   valid: true,
 //   manufacturer: 'Volkswagen',
-//   country: 'Brasil',
-//   countryCode: 'BR',
-//   year: 1997,
-//   possibleYears: [1997],
-//   model: 'Gol',
+//   country: 'Germany',
+//   countryCode: 'DE',
+//   year: 2014,
+//   possibleYears: [1984, 2014],
+//   model: 'Golf',
 //   confidence: 1,
 //   disclaimer: '...'
 // }
 
-validateVin("9BWZZZ377VT004251");
+validateVin("WVWZZZ3CZWE123456");
 // {
 //   valid: true,
-//   vin: '9BWZZZ377VT004251',
-//   normalizedVin: '9BWZZZ377VT004251',
+//   vin: 'WVWZZZ3CZWE123456',
+//   normalizedVin: 'WVWZZZ3CZWE123456',
 //   errors: [],
 //   details: {
 //     lengthValid: true,
 //     charactersValid: true,
 //     checkDigitValid: true,
-//     providedCheckDigit: '7',
-//     calculatedCheckDigit: '7'
+//     providedCheckDigit: 'Z',
+//     calculatedCheckDigit: 'Z'
 //   }
 // }
 ```
@@ -56,34 +56,34 @@ validateVin("9BWZZZ377VT004251");
 ### CLI
 
 ```bash
-npx chassi decode 9BWZZZ377VT004251
+npx chassi decode WVWZZZ3CZWE123456
 
 # === VIN Decode Result ===
 #
-# VIN:          9BWZZZ377VT004251
+# VIN:          WVWZZZ3CZWE123456
 # Valid:        Yes
 # Manufacturer: Volkswagen
-# Country:      Brasil
-# Year:         1997
-# Model:        Gol
+# Country:      Germany
+# Year:         2014
+# Model:        Golf
 # Confidence:   100%
 #
 # Components:
-#   WMI:        9BW
-#   VDS:        ZZZ377
-#   VIS:        VT004251
+#   WMI:        WVW
+#   VDS:        ZZZ3CZ
+#   VIS:        WE123456
 ```
 
 ```bash
-npx chassi validate 9BWZZZ377VT004251
+npx chassi validate 5YJ3E1EA5LF123456
 
 # === VIN Validation Result ===
 #
-# VIN:           9BWZZZ377VT004251
+# VIN:           5YJ3E1EA5LF123456
 # Valid:         Yes
 # Length:        Valid (17 characters)
 # Characters:    Valid
-# Check Digit:   Valid (7)
+# Check Digit:   Valid (5)
 ```
 
 ## VIN Structure
@@ -113,7 +113,6 @@ npx chassi validate 9BWZZZ377VT004251
 | Source                                            | Usage                             |
 | ------------------------------------------------- | --------------------------------- |
 | [NHTSA vPIC](https://vpic.nhtsa.dot.gov/decoder/) | WMI validation, manufacturer data |
-| [DENATRAN/SENATRAN](https://www.gov.br/senatran/) | Brazilian vehicle registration    |
 
 ### Notes
 

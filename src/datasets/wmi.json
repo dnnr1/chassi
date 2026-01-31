@@ -1,0 +1,1152 @@
+{
+  "_metadata": {
+    "description": "World Manufacturer Identifier (WMI) codes - Global database",
+    "version": "2.0.0",
+    "lastUpdated": "2026-01-31",
+    "sources": [
+      {
+        "name": "ISO 3779:2009",
+        "description": "Road vehicles — Vehicle identification number (VIN)",
+        "url": "https://www.iso.org/standard/52200.html"
+      },
+      {
+        "name": "ISO 3780:2009",
+        "description": "Road vehicles — World manufacturer identifier (WMI) code",
+        "url": "https://www.iso.org/standard/52199.html"
+      },
+      {
+        "name": "SAE J853",
+        "description": "Vehicle Identification Number Systems",
+        "url": "https://www.sae.org/standards/content/j853_201511/"
+      },
+      {
+        "name": "NHTSA vPIC",
+        "description": "National Highway Traffic Safety Administration - Product Information Catalog",
+        "url": "https://vpic.nhtsa.dot.gov/decoder/"
+      }
+    ],
+    "disclaimer": "WMI codes are assigned by SAE International. This dataset may not be complete. For official data, consult SAE or your local vehicle registration authority."
+  },
+
+  "1C3": {
+    "manufacturer": "Chrysler",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1C4": {
+    "manufacturer": "Chrysler",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1C6": {
+    "manufacturer": "Chrysler",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1D7": {
+    "manufacturer": "Dodge",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FA": {
+    "manufacturer": "Ford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FB": {
+    "manufacturer": "Ford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FC": {
+    "manufacturer": "Ford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FD": {
+    "manufacturer": "Ford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FM": {
+    "manufacturer": "Ford",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1FT": {
+    "manufacturer": "Ford Truck",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G1": {
+    "manufacturer": "Chevrolet",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G2": {
+    "manufacturer": "Pontiac",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G3": {
+    "manufacturer": "Oldsmobile",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G4": {
+    "manufacturer": "Buick",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G6": {
+    "manufacturer": "Cadillac",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1G8": {
+    "manufacturer": "Saturn",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1GC": {
+    "manufacturer": "Chevrolet Truck",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1GM": {
+    "manufacturer": "Pontiac",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1GT": {
+    "manufacturer": "GMC Truck",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1GY": {
+    "manufacturer": "Cadillac",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1HD": {
+    "manufacturer": "Harley-Davidson",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1HG": {
+    "manufacturer": "Honda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1J4": {
+    "manufacturer": "Jeep",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1J8": {
+    "manufacturer": "Jeep",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1L1": {
+    "manufacturer": "Lincoln",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1LN": {
+    "manufacturer": "Lincoln",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1ME": {
+    "manufacturer": "Mercury",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1N4": {
+    "manufacturer": "Nissan",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1N6": {
+    "manufacturer": "Nissan Truck",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1NX": {
+    "manufacturer": "Toyota (NUMMI)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1VW": {
+    "manufacturer": "Volkswagen",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1YV": {
+    "manufacturer": "Mazda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "1ZV": {
+    "manufacturer": "Ford (AutoAlliance)",
+    "country": "United States",
+    "countryCode": "US"
+  },
+
+  "2C3": {
+    "manufacturer": "Chrysler",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  "2D3": { "manufacturer": "Dodge", "country": "Canada", "countryCode": "CA" },
+  "2FA": { "manufacturer": "Ford", "country": "Canada", "countryCode": "CA" },
+  "2FM": { "manufacturer": "Ford", "country": "Canada", "countryCode": "CA" },
+  "2FT": {
+    "manufacturer": "Ford Truck",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  "2G1": {
+    "manufacturer": "Chevrolet",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  "2G2": {
+    "manufacturer": "Pontiac",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  "2GT": { "manufacturer": "GMC", "country": "Canada", "countryCode": "CA" },
+  "2HG": { "manufacturer": "Honda", "country": "Canada", "countryCode": "CA" },
+  "2HJ": { "manufacturer": "Honda", "country": "Canada", "countryCode": "CA" },
+  "2HK": { "manufacturer": "Honda", "country": "Canada", "countryCode": "CA" },
+  "2HM": {
+    "manufacturer": "Hyundai",
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  "2T1": { "manufacturer": "Toyota", "country": "Canada", "countryCode": "CA" },
+  "2T2": { "manufacturer": "Lexus", "country": "Canada", "countryCode": "CA" },
+  "2T3": { "manufacturer": "Toyota", "country": "Canada", "countryCode": "CA" },
+
+  "3C4": {
+    "manufacturer": "Chrysler",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3C6": {
+    "manufacturer": "Chrysler",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3D7": { "manufacturer": "Dodge", "country": "Mexico", "countryCode": "MX" },
+  "3FA": { "manufacturer": "Ford", "country": "Mexico", "countryCode": "MX" },
+  "3FE": { "manufacturer": "Ford", "country": "Mexico", "countryCode": "MX" },
+  "3G1": {
+    "manufacturer": "Chevrolet",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3G5": { "manufacturer": "Buick", "country": "Mexico", "countryCode": "MX" },
+  "3GN": { "manufacturer": "GMC", "country": "Mexico", "countryCode": "MX" },
+  "3GT": { "manufacturer": "GMC", "country": "Mexico", "countryCode": "MX" },
+  "3GY": {
+    "manufacturer": "Cadillac",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3HG": { "manufacturer": "Honda", "country": "Mexico", "countryCode": "MX" },
+  "3KP": { "manufacturer": "Kia", "country": "Mexico", "countryCode": "MX" },
+  "3LN": {
+    "manufacturer": "Lincoln",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3MW": { "manufacturer": "BMW", "country": "Mexico", "countryCode": "MX" },
+  "3N1": { "manufacturer": "Nissan", "country": "Mexico", "countryCode": "MX" },
+  "3N6": {
+    "manufacturer": "Nissan Truck",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3TM": { "manufacturer": "Toyota", "country": "Mexico", "countryCode": "MX" },
+  "3VV": {
+    "manufacturer": "Volkswagen",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+  "3VW": {
+    "manufacturer": "Volkswagen",
+    "country": "Mexico",
+    "countryCode": "MX"
+  },
+
+  "4F2": {
+    "manufacturer": "Mazda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4JG": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4M2": {
+    "manufacturer": "Mercury",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4S3": {
+    "manufacturer": "Subaru",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4S4": {
+    "manufacturer": "Subaru",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4S6": {
+    "manufacturer": "Hyundai",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4T1": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4T3": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4T4": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "4US": {
+    "manufacturer": "BMW",
+    "country": "United States",
+    "countryCode": "US"
+  },
+
+  "5FN": {
+    "manufacturer": "Honda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5FP": {
+    "manufacturer": "Honda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5FY": {
+    "manufacturer": "Honda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5J6": {
+    "manufacturer": "Honda",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5J8": {
+    "manufacturer": "Acura",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5LM": {
+    "manufacturer": "Lincoln",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5N1": {
+    "manufacturer": "Nissan",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5NM": {
+    "manufacturer": "Hyundai",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5NP": {
+    "manufacturer": "Hyundai",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5TD": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5TE": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5TF": {
+    "manufacturer": "Toyota",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5UX": {
+    "manufacturer": "BMW",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5XY": {
+    "manufacturer": "Kia",
+    "country": "United States",
+    "countryCode": "US"
+  },
+  "5YJ": {
+    "manufacturer": "Tesla",
+    "country": "United States",
+    "countryCode": "US"
+  },
+
+  "6F4": {
+    "manufacturer": "Nissan",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  "6G1": {
+    "manufacturer": "Holden",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  "6G2": {
+    "manufacturer": "Pontiac",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  "6H8": {
+    "manufacturer": "Holden",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  "6MM": {
+    "manufacturer": "Mitsubishi",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  "6T1": {
+    "manufacturer": "Toyota",
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+
+  "7A3": {
+    "manufacturer": "Mazda",
+    "country": "New Zealand",
+    "countryCode": "NZ"
+  },
+  "7AT": {
+    "manufacturer": "Toyota",
+    "country": "New Zealand",
+    "countryCode": "NZ"
+  },
+
+  "8AD": {
+    "manufacturer": "Peugeot",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AF": {
+    "manufacturer": "Ford",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AG": {
+    "manufacturer": "Chevrolet",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AJ": {
+    "manufacturer": "Toyota",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AK": {
+    "manufacturer": "Suzuki",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AP": {
+    "manufacturer": "Fiat",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8AW": {
+    "manufacturer": "Volkswagen",
+    "country": "Argentina",
+    "countryCode": "AR"
+  },
+  "8GD": { "manufacturer": "Peugeot", "country": "Chile", "countryCode": "CL" },
+
+  "936": {
+    "manufacturer": "Mitsubishi",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "93H": { "manufacturer": "Honda", "country": "Brazil", "countryCode": "BR" },
+  "93R": { "manufacturer": "Volvo", "country": "Brazil", "countryCode": "BR" },
+  "93W": {
+    "manufacturer": "Hyundai (CAOA)",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "93X": {
+    "manufacturer": "Mitsubishi",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "93Y": {
+    "manufacturer": "Renault",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "94D": { "manufacturer": "Nissan", "country": "Brazil", "countryCode": "BR" },
+  "9BC": {
+    "manufacturer": "Citroën",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "9BD": { "manufacturer": "Fiat", "country": "Brazil", "countryCode": "BR" },
+  "9BF": { "manufacturer": "Ford", "country": "Brazil", "countryCode": "BR" },
+  "9BG": {
+    "manufacturer": "Chevrolet (General Motors)",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "9BJ": { "manufacturer": "Jeep", "country": "Brazil", "countryCode": "BR" },
+  "9BK": { "manufacturer": "Kia", "country": "Brazil", "countryCode": "BR" },
+  "9BM": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "9BP": {
+    "manufacturer": "Peugeot",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+  "9BR": { "manufacturer": "Toyota", "country": "Brazil", "countryCode": "BR" },
+  "9BS": { "manufacturer": "Scania", "country": "Brazil", "countryCode": "BR" },
+  "9BW": {
+    "manufacturer": "Volkswagen",
+    "country": "Brazil",
+    "countryCode": "BR"
+  },
+
+  "JA3": {
+    "manufacturer": "Mitsubishi",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  "JA4": {
+    "manufacturer": "Mitsubishi",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  "JF1": { "manufacturer": "Subaru", "country": "Japan", "countryCode": "JP" },
+  "JF2": { "manufacturer": "Subaru", "country": "Japan", "countryCode": "JP" },
+  "JH4": { "manufacturer": "Acura", "country": "Japan", "countryCode": "JP" },
+  "JHL": { "manufacturer": "Honda", "country": "Japan", "countryCode": "JP" },
+  "JHM": { "manufacturer": "Honda", "country": "Japan", "countryCode": "JP" },
+  "JM1": { "manufacturer": "Mazda", "country": "Japan", "countryCode": "JP" },
+  "JM3": { "manufacturer": "Mazda", "country": "Japan", "countryCode": "JP" },
+  "JMZ": { "manufacturer": "Mazda", "country": "Japan", "countryCode": "JP" },
+  "JN1": { "manufacturer": "Nissan", "country": "Japan", "countryCode": "JP" },
+  "JN6": { "manufacturer": "Nissan", "country": "Japan", "countryCode": "JP" },
+  "JN8": { "manufacturer": "Nissan", "country": "Japan", "countryCode": "JP" },
+  "JNK": {
+    "manufacturer": "Infiniti",
+    "country": "Japan",
+    "countryCode": "JP"
+  },
+  "JS1": { "manufacturer": "Suzuki", "country": "Japan", "countryCode": "JP" },
+  "JS2": { "manufacturer": "Suzuki", "country": "Japan", "countryCode": "JP" },
+  "JS3": { "manufacturer": "Suzuki", "country": "Japan", "countryCode": "JP" },
+  "JT2": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JT3": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JT4": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JT8": { "manufacturer": "Lexus", "country": "Japan", "countryCode": "JP" },
+  "JTD": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JTE": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JTH": { "manufacturer": "Lexus", "country": "Japan", "countryCode": "JP" },
+  "JTJ": { "manufacturer": "Lexus", "country": "Japan", "countryCode": "JP" },
+  "JTK": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JTL": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JTM": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JTN": { "manufacturer": "Toyota", "country": "Japan", "countryCode": "JP" },
+  "JYA": { "manufacturer": "Yamaha", "country": "Japan", "countryCode": "JP" },
+
+  "KL1": {
+    "manufacturer": "GM Daewoo",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KL7": {
+    "manufacturer": "GM Daewoo",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KM8": {
+    "manufacturer": "Hyundai",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KMH": {
+    "manufacturer": "Hyundai",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KNA": {
+    "manufacturer": "Kia",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KNC": {
+    "manufacturer": "Kia",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KND": {
+    "manufacturer": "Kia",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "KNM": {
+    "manufacturer": "Renault Samsung",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "5XY": {
+    "manufacturer": "Kia",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+
+  "LB2": {
+    "manufacturer": "BMW Brilliance",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LBV": {
+    "manufacturer": "BMW Brilliance",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LDC": {
+    "manufacturer": "Dongfeng Peugeot Citroën",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LFM": {
+    "manufacturer": "FAW Toyota",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LFV": {
+    "manufacturer": "FAW Volkswagen",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LGB": {
+    "manufacturer": "Dongfeng Nissan",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LHG": {
+    "manufacturer": "Guangqi Honda",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LJC": { "manufacturer": "JAC", "country": "China", "countryCode": "CN" },
+  "LKL": {
+    "manufacturer": "GAC Toyota",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LRW": { "manufacturer": "Tesla", "country": "China", "countryCode": "CN" },
+  "LSG": {
+    "manufacturer": "SAIC General Motors",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LSJ": { "manufacturer": "SAIC MG", "country": "China", "countryCode": "CN" },
+  "LSV": {
+    "manufacturer": "SAIC Volkswagen",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LTV": { "manufacturer": "Chery", "country": "China", "countryCode": "CN" },
+  "LVS": {
+    "manufacturer": "Ford Chang'an",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LVV": {
+    "manufacturer": "Changan Volvo",
+    "country": "China",
+    "countryCode": "CN"
+  },
+  "LYV": { "manufacturer": "Volvo", "country": "China", "countryCode": "CN" },
+
+  "MA3": { "manufacturer": "Suzuki", "country": "India", "countryCode": "IN" },
+  "MA6": { "manufacturer": "Hyundai", "country": "India", "countryCode": "IN" },
+  "MAJ": { "manufacturer": "Ford", "country": "India", "countryCode": "IN" },
+  "MAK": { "manufacturer": "Honda", "country": "India", "countryCode": "IN" },
+  "MAL": { "manufacturer": "Hyundai", "country": "India", "countryCode": "IN" },
+  "MBJ": { "manufacturer": "Toyota", "country": "India", "countryCode": "IN" },
+  "MBH": { "manufacturer": "Suzuki", "country": "India", "countryCode": "IN" },
+  "MC1": { "manufacturer": "Nissan", "country": "India", "countryCode": "IN" },
+  "ME3": {
+    "manufacturer": "Nissan",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  "ME4": {
+    "manufacturer": "Honda",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  "MH1": {
+    "manufacturer": "Honda",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  "MHR": {
+    "manufacturer": "Toyota",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  "MHY": {
+    "manufacturer": "Mitsubishi",
+    "country": "Indonesia",
+    "countryCode": "ID"
+  },
+  "ML3": {
+    "manufacturer": "Mitsubishi",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MM8": {
+    "manufacturer": "Mazda",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MMA": {
+    "manufacturer": "Mitsubishi",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MMC": {
+    "manufacturer": "Mitsubishi",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MMT": {
+    "manufacturer": "Mitsubishi",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MNB": { "manufacturer": "Ford", "country": "Thailand", "countryCode": "TH" },
+  "MNT": {
+    "manufacturer": "Nissan",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MR0": {
+    "manufacturer": "Toyota",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+  "MR2": {
+    "manufacturer": "Toyota",
+    "country": "Thailand",
+    "countryCode": "TH"
+  },
+
+  "NLE": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Turkey",
+    "countryCode": "TR"
+  },
+  "NM0": { "manufacturer": "Ford", "country": "Turkey", "countryCode": "TR" },
+  "NM4": {
+    "manufacturer": "Tofaş Fiat",
+    "country": "Turkey",
+    "countryCode": "TR"
+  },
+  "NMT": { "manufacturer": "Toyota", "country": "Turkey", "countryCode": "TR" },
+
+  "SAJ": {
+    "manufacturer": "Jaguar",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SAL": {
+    "manufacturer": "Land Rover",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SAR": {
+    "manufacturer": "Rover",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SB1": {
+    "manufacturer": "Toyota",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SCA": {
+    "manufacturer": "Rolls-Royce",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SCB": {
+    "manufacturer": "Bentley",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SCC": {
+    "manufacturer": "Lotus",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SCE": {
+    "manufacturer": "DeLorean",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SCF": {
+    "manufacturer": "Aston Martin",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SDB": {
+    "manufacturer": "Peugeot",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SED": {
+    "manufacturer": "General Motors",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SFD": {
+    "manufacturer": "Alexander Dennis",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SHH": {
+    "manufacturer": "Honda",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  "SJN": {
+    "manufacturer": "Nissan",
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+
+  "TRU": {
+    "manufacturer": "Audi Hungary",
+    "country": "Hungary",
+    "countryCode": "HU"
+  },
+  "TMB": {
+    "manufacturer": "Škoda",
+    "country": "Czech Republic",
+    "countryCode": "CZ"
+  },
+  "TMP": {
+    "manufacturer": "Škoda",
+    "country": "Czech Republic",
+    "countryCode": "CZ"
+  },
+  "TNE": {
+    "manufacturer": "TPCA",
+    "country": "Czech Republic",
+    "countryCode": "CZ"
+  },
+  "TV9": { "manufacturer": "Rimac", "country": "Croatia", "countryCode": "HR" },
+
+  "UU1": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "UU2": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "UU3": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "UU6": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+
+  "VF1": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VF2": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VF3": {
+    "manufacturer": "Peugeot",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VF6": {
+    "manufacturer": "Renault Trucks",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VF7": {
+    "manufacturer": "Citroën",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VF8": { "manufacturer": "Matra", "country": "France", "countryCode": "FR" },
+  "VN1": {
+    "manufacturer": "Renault",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VNK": { "manufacturer": "Toyota", "country": "France", "countryCode": "FR" },
+  "VR1": {
+    "manufacturer": "DS Automobiles",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VR3": {
+    "manufacturer": "Peugeot",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VR7": {
+    "manufacturer": "Citroën",
+    "country": "France",
+    "countryCode": "FR"
+  },
+  "VSS": { "manufacturer": "SEAT", "country": "Spain", "countryCode": "ES" },
+  "VSK": { "manufacturer": "Nissan", "country": "Spain", "countryCode": "ES" },
+  "VSX": { "manufacturer": "Opel", "country": "Spain", "countryCode": "ES" },
+
+  "W0L": { "manufacturer": "Opel", "country": "Germany", "countryCode": "DE" },
+  "W0V": { "manufacturer": "Opel", "country": "Germany", "countryCode": "DE" },
+  "W1K": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "W1N": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "W1V": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WAG": {
+    "manufacturer": "Neoplan",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WAU": { "manufacturer": "Audi", "country": "Germany", "countryCode": "DE" },
+  "WA1": { "manufacturer": "Audi", "country": "Germany", "countryCode": "DE" },
+  "WBA": { "manufacturer": "BMW", "country": "Germany", "countryCode": "DE" },
+  "WBS": { "manufacturer": "BMW M", "country": "Germany", "countryCode": "DE" },
+  "WBW": { "manufacturer": "BMW", "country": "Germany", "countryCode": "DE" },
+  "WBY": { "manufacturer": "BMW", "country": "Germany", "countryCode": "DE" },
+  "WD1": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WD2": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WD3": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WD4": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WD5": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WDA": { "manufacturer": "MAN", "country": "Germany", "countryCode": "DE" },
+  "WDB": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WDC": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WDD": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WDF": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WDZ": {
+    "manufacturer": "Mercedes-Benz",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WEB": {
+    "manufacturer": "Evobus",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WF0": { "manufacturer": "Ford", "country": "Germany", "countryCode": "DE" },
+  "WJM": { "manufacturer": "Iveco", "country": "Germany", "countryCode": "DE" },
+  "WKK": {
+    "manufacturer": "Karl Kässbohrer",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WMA": { "manufacturer": "MAN", "country": "Germany", "countryCode": "DE" },
+  "WME": { "manufacturer": "Smart", "country": "Germany", "countryCode": "DE" },
+  "WMW": { "manufacturer": "MINI", "country": "Germany", "countryCode": "DE" },
+  "WP0": {
+    "manufacturer": "Porsche",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WP1": {
+    "manufacturer": "Porsche",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WUA": {
+    "manufacturer": "Quattro",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WVG": {
+    "manufacturer": "Volkswagen",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WVW": {
+    "manufacturer": "Volkswagen",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WV1": {
+    "manufacturer": "Volkswagen Commercial",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WV2": {
+    "manufacturer": "Volkswagen Commercial",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+  "WV3": {
+    "manufacturer": "Volkswagen Commercial",
+    "country": "Germany",
+    "countryCode": "DE"
+  },
+
+  "XL9": {
+    "manufacturer": "Spyker",
+    "country": "Netherlands",
+    "countryCode": "NL"
+  },
+  "XLR": {
+    "manufacturer": "DAF",
+    "country": "Netherlands",
+    "countryCode": "NL"
+  },
+
+  "YK1": { "manufacturer": "Saab", "country": "Finland", "countryCode": "FI" },
+  "YS2": { "manufacturer": "Scania", "country": "Sweden", "countryCode": "SE" },
+  "YS3": { "manufacturer": "Saab", "country": "Sweden", "countryCode": "SE" },
+  "YS4": { "manufacturer": "Scania", "country": "Sweden", "countryCode": "SE" },
+  "YT9": {
+    "manufacturer": "Koenigsegg",
+    "country": "Sweden",
+    "countryCode": "SE"
+  },
+  "YV1": { "manufacturer": "Volvo", "country": "Sweden", "countryCode": "SE" },
+  "YV2": {
+    "manufacturer": "Volvo Trucks",
+    "country": "Sweden",
+    "countryCode": "SE"
+  },
+  "YV3": {
+    "manufacturer": "Volvo Buses",
+    "country": "Sweden",
+    "countryCode": "SE"
+  },
+  "YV4": { "manufacturer": "Volvo", "country": "Sweden", "countryCode": "SE" },
+
+  "ZA9": { "manufacturer": "Bugatti", "country": "Italy", "countryCode": "IT" },
+  "ZAM": {
+    "manufacturer": "Maserati",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  "ZAP": { "manufacturer": "Piaggio", "country": "Italy", "countryCode": "IT" },
+  "ZAR": {
+    "manufacturer": "Alfa Romeo",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  "ZCF": { "manufacturer": "Iveco", "country": "Italy", "countryCode": "IT" },
+  "ZCG": {
+    "manufacturer": "Cagiva/MV Agusta",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  "ZD4": { "manufacturer": "Aprilia", "country": "Italy", "countryCode": "IT" },
+  "ZDF": { "manufacturer": "Ferrari", "country": "Italy", "countryCode": "IT" },
+  "ZDM": { "manufacturer": "Ducati", "country": "Italy", "countryCode": "IT" },
+  "ZFA": { "manufacturer": "Fiat", "country": "Italy", "countryCode": "IT" },
+  "ZFC": { "manufacturer": "Fiat", "country": "Italy", "countryCode": "IT" },
+  "ZFF": { "manufacturer": "Ferrari", "country": "Italy", "countryCode": "IT" },
+  "ZHW": {
+    "manufacturer": "Lamborghini",
+    "country": "Italy",
+    "countryCode": "IT"
+  },
+  "ZLA": { "manufacturer": "Lancia", "country": "Italy", "countryCode": "IT" }
+}

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "description": "VDS (Vehicle Descriptor Section) patterns for model inference",
-    "version": "1.0.0",
+    "description": "VDS (Vehicle Descriptor Section) patterns for model inference - Global database",
+    "version": "2.0.0",
     "lastUpdated": "2026-01-31",
     "sources": [
       {
@@ -22,23 +22,68 @@
     "accuracy": "Patterns are community-sourced and may contain errors. Confidence scores reflect pattern reliability."
   },
   "patterns": {
-    "9BW": {
-      "ZZZ37": { "model": "Gol", "generation": "G5/G6", "confidence": 0.8 },
-      "ZZZ6R": { "model": "Fox", "confidence": 0.8 },
-      "2G1": { "model": "Saveiro", "confidence": 0.75 },
-      "CA11": { "model": "Virtus", "confidence": 0.8 },
-      "CA21": { "model": "Polo", "confidence": 0.8 },
-      "BU2": { "model": "T-Cross", "confidence": 0.8 },
-      "AU2": { "model": "Nivus", "confidence": 0.8 },
-      "BN2": { "model": "Taos", "confidence": 0.8 }
+    "1G1": {
+      "YY": { "model": "Corvette", "confidence": 0.85 },
+      "ZT": { "model": "Malibu", "confidence": 0.8 },
+      "JC": { "model": "Cavalier", "confidence": 0.8 },
+      "JF": { "model": "Camaro", "confidence": 0.85 }
     },
-    "9BG": {
-      "JB": { "model": "Onix", "confidence": 0.75 },
-      "JC": { "model": "Onix Plus", "confidence": 0.75 },
-      "RJ": { "model": "Tracker", "confidence": 0.8 },
-      "SK": { "model": "S10", "confidence": 0.8 },
-      "48": { "model": "Spin", "confidence": 0.75 },
-      "E7": { "model": "Equinox", "confidence": 0.8 }
+    "1FA": {
+      "CP": { "model": "Mustang", "confidence": 0.85 },
+      "HP": { "model": "Taurus", "confidence": 0.8 },
+      "TP": { "model": "Fusion", "confidence": 0.8 }
+    },
+    "1FM": {
+      "CU": { "model": "Escape", "confidence": 0.85 },
+      "SK": { "model": "Explorer", "confidence": 0.85 },
+      "JK": { "model": "Expedition", "confidence": 0.85 }
+    },
+    "1HG": {
+      "CR": { "model": "Accord", "confidence": 0.85 },
+      "CG": { "model": "Accord", "confidence": 0.85 },
+      "CP": { "model": "Accord", "confidence": 0.85 },
+      "FA": { "model": "Civic", "confidence": 0.85 }
+    },
+    "1N4": {
+      "AA": { "model": "Maxima", "confidence": 0.85 },
+      "AL": { "model": "Altima", "confidence": 0.85 },
+      "BA": { "model": "Sentra", "confidence": 0.85 }
+    },
+    "2HG": {
+      "FA": { "model": "Civic", "confidence": 0.85 },
+      "FB": { "model": "Civic", "confidence": 0.85 },
+      "FC": { "model": "Civic", "confidence": 0.85 },
+      "FG": { "model": "Accord", "confidence": 0.85 }
+    },
+    "3VW": {
+      "D7": { "model": "Jetta", "confidence": 0.85 },
+      "AA": { "model": "Passat", "confidence": 0.85 },
+      "CB": { "model": "Tiguan", "confidence": 0.85 }
+    },
+    "4T1": {
+      "B": { "model": "Camry", "confidence": 0.85 },
+      "BF": { "model": "Camry", "confidence": 0.85 },
+      "BK": { "model": "Camry", "confidence": 0.85 }
+    },
+    "5YJ": {
+      "S": { "model": "Model S", "confidence": 0.9 },
+      "3": { "model": "Model 3", "confidence": 0.9 },
+      "X": { "model": "Model X", "confidence": 0.9 },
+      "Y": { "model": "Model Y", "confidence": 0.9 }
+    },
+    "5N1": {
+      "AR": { "model": "Pathfinder", "confidence": 0.85 },
+      "AT": { "model": "Rogue", "confidence": 0.85 },
+      "AA": { "model": "Armada", "confidence": 0.85 }
+    },
+    "5NP": {
+      "D": { "model": "Sonata", "confidence": 0.85 },
+      "E": { "model": "Elantra", "confidence": 0.85 }
+    },
+    "5XY": {
+      "PD": { "model": "Sorento", "confidence": 0.85 },
+      "KT": { "model": "Sportage", "confidence": 0.85 },
+      "ZU": { "model": "Soul", "confidence": 0.85 }
     },
     "9BD": {
       "195": { "model": "Argo", "confidence": 0.8 },
@@ -50,13 +95,18 @@
       "327": { "model": "Pulse", "confidence": 0.8 },
       "348": { "model": "Fastback", "confidence": 0.8 }
     },
-    "93H": {
-      "FB2": { "model": "Civic", "confidence": 0.8 },
-      "GK5": { "model": "Fit", "confidence": 0.8 },
-      "RU": { "model": "HR-V", "confidence": 0.8 },
-      "CR": { "model": "CR-V", "confidence": 0.8 },
-      "GM6": { "model": "City", "confidence": 0.8 },
-      "RW": { "model": "WR-V", "confidence": 0.8 }
+    "9BG": {
+      "JB": { "model": "Onix", "confidence": 0.75 },
+      "JC": { "model": "Onix Plus", "confidence": 0.75 },
+      "RJ": { "model": "Tracker", "confidence": 0.8 },
+      "SK": { "model": "S10", "confidence": 0.8 },
+      "48": { "model": "Spin", "confidence": 0.75 },
+      "E7": { "model": "Equinox", "confidence": 0.8 }
+    },
+    "9BJ": {
+      "BU": { "model": "Renegade", "confidence": 0.8 },
+      "MP": { "model": "Compass", "confidence": 0.8 },
+      "M6": { "model": "Commander", "confidence": 0.8 }
     },
     "9BR": {
       "53": { "model": "Corolla", "confidence": 0.8 },
@@ -66,6 +116,29 @@
       "GA": { "model": "SW4", "confidence": 0.8 },
       "MA": { "model": "RAV4", "confidence": 0.8 }
     },
+    "9BW": {
+      "ZZZ37": { "model": "Gol", "generation": "G5/G6", "confidence": 0.8 },
+      "ZZZ6R": { "model": "Fox", "confidence": 0.8 },
+      "2G1": { "model": "Saveiro", "confidence": 0.75 },
+      "CA11": { "model": "Virtus", "confidence": 0.8 },
+      "CA21": { "model": "Polo", "confidence": 0.8 },
+      "BU2": { "model": "T-Cross", "confidence": 0.8 },
+      "AU2": { "model": "Nivus", "confidence": 0.8 },
+      "BN2": { "model": "Taos", "confidence": 0.8 }
+    },
+    "93H": {
+      "FB2": { "model": "Civic", "confidence": 0.8 },
+      "GK5": { "model": "Fit", "confidence": 0.8 },
+      "RU": { "model": "HR-V", "confidence": 0.8 },
+      "CR": { "model": "CR-V", "confidence": 0.8 },
+      "GM6": { "model": "City", "confidence": 0.8 },
+      "RW": { "model": "WR-V", "confidence": 0.8 }
+    },
+    "93W": {
+      "HB20": { "model": "HB20", "confidence": 0.8 },
+      "SX2": { "model": "Creta", "confidence": 0.8 },
+      "TM": { "model": "Tucson", "confidence": 0.8 }
+    },
     "93Y": {
       "B4A": { "model": "Kwid", "confidence": 0.8 },
       "HJD": { "model": "Duster", "confidence": 0.8 },
@@ -74,15 +147,257 @@
       "LJL": { "model": "Logan", "confidence": 0.8 },
       "XJK": { "model": "Oroch", "confidence": 0.75 }
     },
-    "93W": {
-      "HB20": { "model": "HB20", "confidence": 0.8 },
-      "SX2": { "model": "Creta", "confidence": 0.8 },
-      "TM": { "model": "Tucson", "confidence": 0.8 }
+    "JH4": {
+      "CU": { "model": "RSX", "confidence": 0.85 },
+      "KB": { "model": "TL", "confidence": 0.85 },
+      "KA": { "model": "TSX", "confidence": 0.85 },
+      "DC": { "model": "Integra", "confidence": 0.85 }
     },
-    "9BJ": {
-      "BU": { "model": "Renegade", "confidence": 0.8 },
-      "MP": { "model": "Compass", "confidence": 0.8 },
-      "M6": { "model": "Commander", "confidence": 0.8 }
+    "JHM": {
+      "CG": { "model": "Accord", "confidence": 0.85 },
+      "CP": { "model": "Accord", "confidence": 0.85 },
+      "CU": { "model": "Accord", "confidence": 0.85 },
+      "ZE": { "model": "Insight", "confidence": 0.85 }
+    },
+    "JM1": {
+      "BK": { "model": "Mazda3", "confidence": 0.85 },
+      "BM": { "model": "Mazda3", "confidence": 0.85 },
+      "BP": { "model": "Mazda3", "confidence": 0.85 },
+      "GL": { "model": "Mazda6", "confidence": 0.85 },
+      "GJ": { "model": "Mazda6", "confidence": 0.85 },
+      "NC": { "model": "MX-5 Miata", "confidence": 0.85 },
+      "NB": { "model": "MX-5 Miata", "confidence": 0.85 },
+      "NA": { "model": "MX-5 Miata", "confidence": 0.85 }
+    },
+    "JM3": {
+      "TB": { "model": "CX-9", "confidence": 0.85 },
+      "KE": { "model": "CX-5", "confidence": 0.85 }
+    },
+    "JN1": {
+      "TA": { "model": "Altima", "confidence": 0.85 },
+      "TB": { "model": "Sentra", "confidence": 0.85 },
+      "FB": { "model": "Murano", "confidence": 0.85 },
+      "CA": { "model": "Maxima", "confidence": 0.85 }
+    },
+    "JNK": {
+      "CV": { "model": "G37", "confidence": 0.85 },
+      "BY": { "model": "FX", "confidence": 0.85 },
+      "BV": { "model": "EX", "confidence": 0.85 }
+    },
+    "JT2": {
+      "EL": { "model": "Tercel", "confidence": 0.8 },
+      "AE": { "model": "Corolla", "confidence": 0.85 },
+      "SW": { "model": "Camry", "confidence": 0.85 },
+      "SK": { "model": "Camry", "confidence": 0.85 }
+    },
+    "JT8": {
+      "BH": { "model": "ES", "confidence": 0.85 },
+      "BD": { "model": "GS", "confidence": 0.85 },
+      "UF": { "model": "LS", "confidence": 0.85 }
+    },
+    "JTD": {
+      "BK": { "model": "Camry", "confidence": 0.85 },
+      "BL": { "model": "Camry", "confidence": 0.85 },
+      "BU": { "model": "Camry", "confidence": 0.85 }
+    },
+    "KM8": {
+      "J": { "model": "Tucson", "confidence": 0.85 },
+      "SM": { "model": "Santa Fe", "confidence": 0.85 },
+      "SC": { "model": "Santa Fe", "confidence": 0.85 },
+      "SH": { "model": "Santa Fe", "confidence": 0.85 }
+    },
+    "KMH": {
+      "CT": { "model": "Elantra", "confidence": 0.85 },
+      "D": { "model": "Elantra", "confidence": 0.85 },
+      "GN": { "model": "Azera", "confidence": 0.85 },
+      "DH": { "model": "Sonata", "confidence": 0.85 }
+    },
+    "KNA": {
+      "DC": { "model": "Spectra", "confidence": 0.85 },
+      "FU": { "model": "Forte", "confidence": 0.85 },
+      "LD": { "model": "Rio", "confidence": 0.85 },
+      "JU": { "model": "Sorento", "confidence": 0.85 }
+    },
+    "KND": {
+      "JB": { "model": "Sportage", "confidence": 0.85 },
+      "MC": { "model": "Sorento", "confidence": 0.85 }
+    },
+    "SAJ": {
+      "WA": { "model": "XJ", "confidence": 0.85 },
+      "AC": { "model": "XK", "confidence": 0.85 },
+      "AA": { "model": "F-Type", "confidence": 0.85 },
+      "EA": { "model": "XE", "confidence": 0.85 },
+      "AJ": { "model": "XF", "confidence": 0.85 }
+    },
+    "SAL": {
+      "VA": { "model": "Range Rover", "confidence": 0.85 },
+      "GS": { "model": "Range Rover Sport", "confidence": 0.85 },
+      "LA": { "model": "Discovery", "confidence": 0.85 },
+      "FA": { "model": "Freelander", "confidence": 0.85 },
+      "ZA": { "model": "Range Rover Evoque", "confidence": 0.85 },
+      "DA": { "model": "Defender", "confidence": 0.85 }
+    },
+    "TMB": {
+      "AH": { "model": "Octavia", "confidence": 0.85 },
+      "EA": { "model": "Fabia", "confidence": 0.85 },
+      "GE": { "model": "Superb", "confidence": 0.85 },
+      "DL": { "model": "Kodiaq", "confidence": 0.85 }
+    },
+    "VF1": {
+      "R": { "model": "Clio", "confidence": 0.85 },
+      "B": { "model": "Megane", "confidence": 0.85 },
+      "L": { "model": "Laguna", "confidence": 0.85 },
+      "K": { "model": "Kadjar", "confidence": 0.85 }
+    },
+    "VF3": {
+      "LC": { "model": "208", "confidence": 0.85 },
+      "3C": { "model": "308", "confidence": 0.85 },
+      "CC": { "model": "508", "confidence": 0.85 },
+      "3A": { "model": "3008", "confidence": 0.85 },
+      "3B": { "model": "5008", "confidence": 0.85 }
+    },
+    "VF7": {
+      "N": { "model": "C3", "confidence": 0.85 },
+      "NC": { "model": "C4", "confidence": 0.85 },
+      "RD": { "model": "C5", "confidence": 0.85 },
+      "SH": { "model": "C4 Picasso", "confidence": 0.85 }
+    },
+    "W0L": {
+      "0A": { "model": "Corsa", "confidence": 0.85 },
+      "0S": { "model": "Astra", "confidence": 0.85 },
+      "0X": { "model": "Insignia", "confidence": 0.85 },
+      "0J": { "model": "Mokka", "confidence": 0.85 },
+      "0G": { "model": "Grandland", "confidence": 0.85 }
+    },
+    "WAU": {
+      "ZZ": { "model": "A4", "confidence": 0.85 },
+      "F": { "model": "A6", "confidence": 0.85 },
+      "G": { "model": "A8", "confidence": 0.85 },
+      "FG": { "model": "A6", "confidence": 0.85 },
+      "8F": { "model": "A3", "confidence": 0.85 }
+    },
+    "WA1": {
+      "LA": { "model": "Q7", "confidence": 0.85 },
+      "LG": { "model": "Q3", "confidence": 0.85 },
+      "AA": { "model": "Q5", "confidence": 0.85 }
+    },
+    "WBA": {
+      "PH": { "model": "3 Series", "confidence": 0.85 },
+      "VA": { "model": "5 Series", "confidence": 0.85 },
+      "KA": { "model": "7 Series", "confidence": 0.85 },
+      "JA": { "model": "X1", "confidence": 0.85 },
+      "JW": { "model": "X3", "confidence": 0.85 },
+      "NY": { "model": "X5", "confidence": 0.85 },
+      "PN": { "model": "3 Series", "confidence": 0.85 }
+    },
+    "WBS": {
+      "PH": { "model": "M3", "confidence": 0.9 },
+      "NB": { "model": "M5", "confidence": 0.9 },
+      "DT": { "model": "M4", "confidence": 0.9 }
+    },
+    "WDB": {
+      "RF": { "model": "C-Class", "confidence": 0.85 },
+      "NG": { "model": "E-Class", "confidence": 0.85 },
+      "VF": { "model": "S-Class", "confidence": 0.85 },
+      "UH": { "model": "S-Class", "confidence": 0.85 }
+    },
+    "WDC": {
+      "YC": { "model": "GLE", "confidence": 0.85 },
+      "AG": { "model": "GLA", "confidence": 0.85 },
+      "XC": { "model": "GLC", "confidence": 0.85 }
+    },
+    "WDD": {
+      "GF": { "model": "CLA", "confidence": 0.85 },
+      "UG": { "model": "C-Class", "confidence": 0.85 },
+      "1J": { "model": "E-Class", "confidence": 0.85 }
+    },
+    "WF0": {
+      "XX": { "model": "Focus", "confidence": 0.85 },
+      "GC": { "model": "Fiesta", "confidence": 0.85 },
+      "EG": { "model": "Mondeo", "confidence": 0.85 },
+      "FU": { "model": "Kuga", "confidence": 0.85 }
+    },
+    "WMW": {
+      "XS": { "model": "Cooper", "confidence": 0.85 },
+      "XU": { "model": "Cooper Clubman", "confidence": 0.85 },
+      "XY": { "model": "Cooper Countryman", "confidence": 0.85 },
+      "MF": { "model": "Cooper", "confidence": 0.85 }
+    },
+    "WP0": {
+      "AA": { "model": "911", "confidence": 0.9 },
+      "AB": { "model": "911", "confidence": 0.9 },
+      "CA": { "model": "Cayman", "confidence": 0.9 },
+      "CB": { "model": "Boxster", "confidence": 0.9 },
+      "ZZ": { "model": "Panamera", "confidence": 0.9 }
+    },
+    "WP1": {
+      "AA": { "model": "Cayenne", "confidence": 0.9 },
+      "AB": { "model": "Cayenne", "confidence": 0.9 },
+      "AG": { "model": "Macan", "confidence": 0.9 }
+    },
+    "WVW": {
+      "ZZ": { "model": "Golf", "confidence": 0.85 },
+      "AA": { "model": "Passat", "confidence": 0.85 },
+      "2G": { "model": "Jetta", "confidence": 0.85 },
+      "3C": { "model": "Passat", "confidence": 0.85 }
+    },
+    "WVG": {
+      "ZZ": { "model": "Touareg", "confidence": 0.85 },
+      "BV": { "model": "Tiguan", "confidence": 0.85 }
+    },
+    "YV1": {
+      "RS": { "model": "S60", "confidence": 0.85 },
+      "LF": { "model": "XC90", "confidence": 0.85 },
+      "CZ": { "model": "XC60", "confidence": 0.85 },
+      "UZ": { "model": "XC40", "confidence": 0.85 },
+      "AF": { "model": "V60", "confidence": 0.85 },
+      "MS": { "model": "S40", "confidence": 0.85 }
+    },
+    "YV4": {
+      "CZ": { "model": "XC60", "confidence": 0.85 },
+      "952": { "model": "XC90", "confidence": 0.85 },
+      "B": { "model": "V60", "confidence": 0.85 }
+    },
+    "ZAM": {
+      "GJ": { "model": "Ghibli", "confidence": 0.9 },
+      "BJ": { "model": "Quattroporte", "confidence": 0.9 },
+      "LU": { "model": "Levante", "confidence": 0.9 },
+      "GP": { "model": "GranTurismo", "confidence": 0.9 }
+    },
+    "ZAR": {
+      "93": { "model": "Giulia", "confidence": 0.9 },
+      "94": { "model": "Stelvio", "confidence": 0.9 },
+      "FA": { "model": "Giulietta", "confidence": 0.85 }
+    },
+    "ZCG": {
+      "LH": { "model": "F4", "confidence": 0.9 },
+      "LS": { "model": "Brutale", "confidence": 0.9 }
+    },
+    "ZDM": {
+      "1X": { "model": "Monster", "confidence": 0.9 },
+      "UA": { "model": "Panigale", "confidence": 0.9 },
+      "L": { "model": "Multistrada", "confidence": 0.9 }
+    },
+    "ZFA": {
+      "312": { "model": "500", "confidence": 0.85 },
+      "334": { "model": "Panda", "confidence": 0.85 },
+      "199": { "model": "Punto", "confidence": 0.85 },
+      "356": { "model": "500X", "confidence": 0.85 }
+    },
+    "ZFF": {
+      "GJ": { "model": "F8", "confidence": 0.95 },
+      "FT": { "model": "488", "confidence": 0.95 },
+      "GK": { "model": "812", "confidence": 0.95 },
+      "BR": { "model": "458", "confidence": 0.95 },
+      "ZP": { "model": "SF90", "confidence": 0.95 },
+      "DK": { "model": "Portofino", "confidence": 0.95 },
+      "CD": { "model": "Roma", "confidence": 0.95 }
+    },
+    "ZHW": {
+      "UR": { "model": "Urus", "confidence": 0.95 },
+      "UE": { "model": "Huracán", "confidence": 0.95 },
+      "UC": { "model": "Aventador", "confidence": 0.95 },
+      "EC": { "model": "Gallardo", "confidence": 0.9 }
     }
   }
 }

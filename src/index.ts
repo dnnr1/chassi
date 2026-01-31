@@ -28,7 +28,6 @@ export {
   decodeVinBasic,
   decodeManufacturer,
   decodeYear,
-  isBrazilianVin,
   listKnownManufacturers,
 } from "./decoder/decode";
 

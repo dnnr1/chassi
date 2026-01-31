@@ -73,4 +73,4 @@ export interface DecodeOptions {
 }
 
 export const DEFAULT_DISCLAIMER =
-  "The returned data is inferred and unofficial. For official information, consult DENATRAN or the manufacturer.";
+  "The returned data is inferred and unofficial. For official information, consult the manufacturer or your local vehicle registration authority.";
