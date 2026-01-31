@@ -8,7 +8,7 @@
     "chassi": "./dist/cli/decode.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "test": "pnpm exec jest"
   },
   "devDependencies": {

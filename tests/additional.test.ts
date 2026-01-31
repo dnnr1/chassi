@@ -1,8 +1,9 @@
+/// <reference types="jest" />
 /**
  * Additional tests for edge cases, integration, and real-world scenarios
  */
-
 import { decodeVin, isValidVin, parseVin, validateVin } from "../src";
+import * as mainExports from "../src";
 
 describe("Integration Tests", () => {
   describe("full decode workflow", () => {
@@ -139,8 +140,6 @@ describe("Performance", () => {
 
 describe("Export Verification", () => {
   it("should export all public functions from main module", () => {
-    const mainExports = require("../src");
-
     // Core functions
     expect(typeof mainExports.validateVin).toBe("function");
     expect(typeof mainExports.isValidVin).toBe("function");
