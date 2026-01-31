@@ -2,6 +2,19 @@
   "name": "chassi",
   "version": "1.0.0",
   "description": "Offline VIN decoder library for Brazilian vehicles",
+  "keywords": [
+    "chassi",
+    "vin",
+    "vehicle",
+    "car",
+    "automobile",
+    "decoder",
+    "brasil",
+    "brazil",
+    "offline",
+    "vehicle-data",
+    "car-data"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
