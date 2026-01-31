@@ -1,6 +1,3 @@
-/**
- * Error found during VIN validation
- */
 export interface VinValidationError {
   code: string;
   message: string;
@@ -8,9 +5,6 @@ export interface VinValidationError {
   character?: string;
 }
 
-/**
- * Details of VIN validation
- */
 export interface VinValidationDetails {
   lengthValid: boolean;
   charactersValid: boolean;
@@ -19,9 +13,6 @@ export interface VinValidationDetails {
   calculatedCheckDigit?: string;
 }
 
-/**
- * Result of VIN validation
- */
 export interface VinValidationResult {
   valid: boolean;
   vin: string;
@@ -30,9 +21,6 @@ export interface VinValidationResult {
   details: VinValidationDetails;
 }
 
-/**
- * Manufacturer information decoded from WMI
- */
 export interface ManufacturerInfo {
   wmi: string;
   manufacturer: string;
@@ -40,9 +28,6 @@ export interface ManufacturerInfo {
   countryCode: string;
 }
 
-/**
- * Year information decoded from VIN
- */
 export interface YearInfo {
   code: string;
   possibleYears: number[];
@@ -50,9 +35,6 @@ export interface YearInfo {
   confidence: number;
 }
 
-/**
- * VIN components
- */
 export interface VinComponents {
   wmi: string;
   vds: string;
@@ -63,9 +45,6 @@ export interface VinComponents {
   sequentialNumber: string;
 }
 
-/**
- * Model inference result
- */
 export interface ModelInference {
   model: string | null;
   confidence: number;
@@ -74,9 +53,6 @@ export interface ModelInference {
   additionalInfo?: Record<string, string>;
 }
 
-/**
- * Full VIN decode result
- */
 export interface VinDecodeResult {
   vin: string;
   valid: boolean;
@@ -91,16 +67,10 @@ export interface VinDecodeResult {
   disclaimer: string;
 }
 
-/**
- * Decode options
- */
 export interface DecodeOptions {
   strict?: boolean;
   includeComponents?: boolean;
 }
 
-/**
- * Default disclaimer message
- */
 export const DEFAULT_DISCLAIMER =
   "The returned data is inferred and unofficial. For official information, consult DENATRAN or the manufacturer.";
