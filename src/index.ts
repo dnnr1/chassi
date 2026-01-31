@@ -1,4 +1,3 @@
-// Core validation functions
 export {
   normalizeVin,
   isValidVinStructure,
@@ -6,7 +5,6 @@ export {
   isValidVin,
 } from "./core/validateVin";
 
-// Check digit functions
 export {
   calculateCheckDigit,
   verifyCheckDigit,
@@ -14,7 +12,6 @@ export {
   transliterateChar,
 } from "./core/checkDigit";
 
-// VIN parsing functions
 export {
   parseVin,
   extractWmi,
@@ -26,7 +23,6 @@ export {
   reconstructVin,
 } from "./core/parseVin";
 
-// Decoder functions
 export {
   decodeVin,
   decodeVinBasic,
@@ -36,7 +32,6 @@ export {
   listKnownManufacturers,
 } from "./decoder/decode";
 
-// Model inference functions
 export {
   inferModel,
   listKnownModels,
@@ -44,7 +39,6 @@ export {
   getModelPatternsMetadata,
 } from "./decoder/inferModel";
 
-// Confidence calculation functions
 export {
   calculateConfidenceScore,
   calculateYearConfidence,
@@ -52,7 +46,6 @@ export {
   combineConfidenceScores,
 } from "./decoder/confidenceScore";
 
-// Type exports
 export type {
   VinValidationResult,
   VinValidationError,
@@ -61,10 +54,8 @@ export type {
   YearInfo,
   VinComponents,
   ModelInference,
-
   VinDecodeResult,
   DecodeOptions,
 } from "./types";
 
-// Constants
 export { DEFAULT_DISCLAIMER } from "./types";
