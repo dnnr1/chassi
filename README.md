@@ -1,6 +1,6 @@
 # chassi
 
-Offline VIN decoder library for Brazilian vehicles.
+Offline VIN decoder for Brazilian vehicles.
 
 ## Installation
 
@@ -10,31 +10,87 @@ npm install chassi
 
 ## Usage
 
-```typescript
-import { decodeVin } from 'chassi';
+### Library
 
-const result = decodeVin('9BWZZZ377VT004251');
-console.log(result);
+```typescript
+import { decodeVin, validateVin } from "chassi";
+
+decodeVin("9BWZZZ377VT004251");
+// {
+//   vin: '9BWZZZ377VT004251',
+//   valid: true,
+//   manufacturer: 'Volkswagen',
+//   country: 'Brasil',
+//   countryCode: 'BR',
+//   year: 1997,
+//   possibleYears: [1997],
+//   model: 'Gol',
+//   confidence: 1,
+//   disclaimer: '...'
+// }
+
+validateVin("9BWZZZ377VT004251");
+// {
+//   valid: true,
+//   vin: '9BWZZZ377VT004251',
+//   normalizedVin: '9BWZZZ377VT004251',
+//   errors: [],
+//   details: {
+//     lengthValid: true,
+//     charactersValid: true,
+//     checkDigitValid: true,
+//     providedCheckDigit: '7',
+//     calculatedCheckDigit: '7'
+//   }
+// }
 ```
 
-## How It Works
+### CLI
 
-A VIN (Vehicle Identification Number) has 17 characters:
+```bash
+npx chassi decode 9BWZZZ377VT004251
 
-- **WMI (1-3)**: World Manufacturer Identifier
-- **VDS (4-9)**: Vehicle Descriptor Section  
-- **VIS (10-17)**: Vehicle Identifier Section
+# === VIN Decode Result ===
+#
+# VIN:          9BWZZZ377VT004251
+# Valid:        Yes
+# Manufacturer: Volkswagen
+# Country:      Brasil
+# Year:         1997
+# Model:        Gol
+# Confidence:   100%
+#
+# Components:
+#   WMI:        9BW
+#   VDS:        ZZZ377
+#   VIS:        VT004251
+```
 
-### Check Digit
+```bash
+npx chassi validate 9BWZZZ377VT004251
 
-Position 9 contains a check digit calculated using ISO 3779 algorithm.
+# === VIN Validation Result ===
+#
+# VIN:           9BWZZZ377VT004251
+# Valid:         Yes
+# Length:        Valid (17 characters)
+# Characters:    Valid
+# Check Digit:   Valid (7)
+```
 
-### Year Codes
+## VIN Structure
 
-Position 10 indicates the model year (A=1980/2010, B=1981/2011, etc.)
+| Position | Name  | Description                   |
+| -------- | ----- | ----------------------------- |
+| 1-3      | WMI   | World Manufacturer Identifier |
+| 4-9      | VDS   | Vehicle Descriptor Section    |
+| 9        | Check | Check digit (ISO 3779)        |
+| 10       | Year  | Model year code               |
+| 11       | Plant | Assembly plant                |
+| 12-17    | Seq   | Sequential number             |
 
 ## Data Sources
 
 - ISO 3779 standard
-- Brazilian DENATRAN data
+- Brazilian DENATRAN
 - Manufacturer documentation

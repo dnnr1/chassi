@@ -9,26 +9,17 @@ const VIN_LENGTH = 17;
 const FORBIDDEN_CHARS = ["I", "O", "Q"];
 const VALID_CHARS_REGEX = /^[A-HJ-NPR-Z0-9]+$/;
 
-/**
- * Normalizes a VIN by converting to uppercase and removing spaces/dashes
- */
 export function normalizeVin(vin: string): string {
   if (!vin) return "";
   return vin.toUpperCase().replace(/[\s-]/g, "");
 }
 
-/**
- * Checks if VIN has valid structure (correct length and characters)
- */
 export function isValidVinStructure(vin: string): boolean {
   const normalized = normalizeVin(vin);
   if (normalized.length !== VIN_LENGTH) return false;
   return VALID_CHARS_REGEX.test(normalized);
 }
 
-/**
- * Finds forbidden characters in VIN
- */
 function findForbiddenCharacters(vin: string): VinValidationError[] {
   const errors: VinValidationError[] = [];
   const normalized = normalizeVin(vin);
@@ -48,9 +39,6 @@ function findForbiddenCharacters(vin: string): VinValidationError[] {
   return errors;
 }
 
-/**
- * Finds invalid characters in VIN
- */
 function findInvalidCharacters(vin: string): VinValidationError[] {
   const errors: VinValidationError[] = [];
   const normalized = normalizeVin(vin);
@@ -70,9 +58,6 @@ function findInvalidCharacters(vin: string): VinValidationError[] {
   return errors;
 }
 
-/**
- * Validates a VIN and returns detailed result
- */
 export function validateVin(vin: string): VinValidationResult {
   const normalizedVin = normalizeVin(vin);
   const errors: VinValidationError[] = [];
@@ -154,9 +139,6 @@ export function validateVin(vin: string): VinValidationResult {
   };
 }
 
-/**
- * Checks if VIN is valid (simple boolean return)
- */
 export function isValidVin(vin: string): boolean {
   return validateVin(vin).valid;
 }

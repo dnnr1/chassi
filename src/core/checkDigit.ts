@@ -1,6 +1,4 @@
-/**
- * Transliteration table per ISO 3779
- */
+/** ISO 3779 character-to-number transliteration. */
 const TRANSLITERATION: Record<string, number> = {
   A: 1,
   B: 2,
@@ -27,14 +25,9 @@ const TRANSLITERATION: Record<string, number> = {
   Z: 9,
 };
 
-/**
- * Positional weights per ISO 3779
- */
+/** ISO 3779 positional weights for check digit calculation. */
 const WEIGHTS = [8, 7, 6, 5, 4, 3, 2, 10, 0, 9, 8, 7, 6, 5, 4, 3, 2];
 
-/**
- * Transliterates a character to its numeric value per ISO 3779
- */
 export function transliterateChar(char: string): number | null {
   const c = char.toUpperCase();
 
@@ -49,9 +42,7 @@ export function transliterateChar(char: string): number | null {
   return null;
 }
 
-/**
- * Calculates the check digit for a VIN per ISO 3779
- */
+/** Calculates check digit (position 9) using ISO 3779 weighted sum mod 11. */
 export function calculateCheckDigit(vin: string): string | null {
   if (vin.length !== 17) return null;
 
@@ -71,9 +62,6 @@ export function calculateCheckDigit(vin: string): string | null {
   return remainder === 10 ? "X" : remainder.toString();
 }
 
-/**
- * Verifies if the check digit in a VIN is correct
- */
 export function verifyCheckDigit(vin: string): boolean {
   if (vin.length !== 17) return false;
 
@@ -86,9 +74,6 @@ export function verifyCheckDigit(vin: string): boolean {
   return provided === calculated;
 }
 
-/**
- * Extracts the check digit from a VIN (position 9)
- */
 export function extractCheckDigit(vin: string): string | null {
   if (vin.length < 9) return null;
   return vin[8].toUpperCase();

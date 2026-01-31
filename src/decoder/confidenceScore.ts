@@ -1,13 +1,8 @@
-/**
- * Rounds a number to 2 decimal places
- */
 function round2(n: number): number {
   return Math.round(n * 100) / 100;
 }
 
-/**
- * Calculates overall confidence score for VIN decode result
- */
+/** Weighted confidence: VIN valid (30%), WMI found (30%), VDS pattern (25%), Brazilian (15%). */
 export function calculateConfidenceScore(factors: {
   vinValid: boolean;
   wmiFound: boolean;
@@ -40,9 +35,6 @@ export function calculateConfidenceScore(factors: {
   return round2(score / total);
 }
 
-/**
- * Calculates confidence for year based on possible years
- */
 export function calculateYearConfidence(possibleYears: number[]): number {
   if (possibleYears.length === 0) return 0;
   if (possibleYears.length === 1) return 1;
@@ -56,9 +48,6 @@ export function calculateYearConfidence(possibleYears: number[]): number {
   return 0.3;
 }
 
-/**
- * Calculates confidence for model inference
- */
 export function calculateModelConfidence(
   matchedPattern: string | undefined,
   vds: string,
@@ -77,9 +66,6 @@ export function calculateModelConfidence(
   return Math.min(1, round2(score));
 }
 
-/**
- * Combines multiple confidence scores with optional weights
- */
 export function combineConfidenceScores(
   scores: number[],
   weights?: number[],

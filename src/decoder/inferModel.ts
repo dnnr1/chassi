@@ -12,9 +12,6 @@ const patterns = (modelData as any).patterns as Record<
   Record<string, ModelPattern>
 >;
 
-/**
- * Infers the vehicle model from WMI and VDS
- */
 export function inferModel(wmi: string, vds: string): ModelInference {
   const normalizedWmi = wmi.toUpperCase();
   const normalizedVds = vds.toUpperCase();
@@ -48,9 +45,6 @@ export function inferModel(wmi: string, vds: string): ModelInference {
   return { model: null, confidence: 0, source: "inferred" };
 }
 
-/**
- * Lists all known models for a WMI
- */
 export function listKnownModels(wmi: string): string[] {
   const normalizedWmi = wmi.toUpperCase();
   const wmiPatterns = patterns[normalizedWmi];
@@ -63,17 +57,11 @@ export function listKnownModels(wmi: string): string[] {
   return Array.from(models).sort();
 }
 
-/**
- * Checks if WMI has model patterns
- */
 export function hasModelPatterns(wmi: string): boolean {
   const normalizedWmi = wmi.toUpperCase();
   return patterns[normalizedWmi] !== undefined;
 }
 
-/**
- * Gets metadata about model patterns dataset
- */
 export function getModelPatternsMetadata(): {
   description: string;
   source: string;
