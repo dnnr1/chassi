@@ -1,3 +1,4 @@
-export * from './validateVin';
-export * from './checkDigit';
-export * from './parseVin';
+// Core module exports
+export * from "./validateVin";
+export * from "./checkDigit";
+export * from "./parseVin";

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "description": "Year codes per ISO 3779",
-    "note": "Years cycle every 30 years"
+    "note": "Years cycle every 30 years starting from 1980"
   },
   "codes": {
     "A": [1980, 2010],

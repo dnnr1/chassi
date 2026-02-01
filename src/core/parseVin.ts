@@ -1,16 +1,14 @@
-import { normalizeVin, hasValidCharacters } from './validateVin';
+import { VinComponents } from "../types";
+import { normalizeVin } from "./validateVin";
+
+const FORBIDDEN_CHARS = ["I", "O", "Q"];
 
 /**
- * VIN components
+ * Checks if VIN contains only valid characters
  */
-export interface VinComponents {
-  wmi: string;
-  vds: string;
-  vis: string;
-  checkDigit: string;
-  yearCode: string;
-  plantCode: string;
-  sequentialNumber: string;
+function hasValidCharacters(vin: string): boolean {
+  const validCharsRegex = /^[A-HJ-NPR-Z0-9]+$/;
+  return validCharsRegex.test(vin);
 }
 
 /**
@@ -18,10 +16,10 @@ export interface VinComponents {
  */
 export function parseVin(vin: string): VinComponents | null {
   const normalized = normalizeVin(vin);
-  
+
   if (normalized.length !== 17) return null;
   if (!hasValidCharacters(normalized)) return null;
-  
+
   return {
     wmi: normalized.substring(0, 3),
     vds: normalized.substring(3, 9),
@@ -29,7 +27,7 @@ export function parseVin(vin: string): VinComponents | null {
     checkDigit: normalized[8],
     yearCode: normalized[9],
     plantCode: normalized[10],
-    sequentialNumber: normalized.substring(11, 17)
+    sequentialNumber: normalized.substring(11, 17),
   };
 }
 
@@ -86,14 +84,19 @@ export function extractSequentialNumber(vin: string): string | null {
   if (normalized.length < 17) return null;
   return normalized.substring(11, 17);
 }
+
 /**
- * Reconstructs a VIN from components
+ * Reconstructs a VIN from its components
  */
-export function reconstructVin(components: Partial<VinComponents>): string | null {
-  if (!components.wmi || !components.vds || !components.vis) return null;
-  if (components.wmi.length !== 3) return null;
-  if (components.vds.length !== 6) return null;
-  if (components.vis.length !== 8) return null;
-  
-  return components.wmi + components.vds + components.vis;
+export function reconstructVin(
+  components: Partial<VinComponents>,
+): string | null {
+  const { wmi, vds, vis } = components;
+
+  if (!wmi || !vds || !vis) return null;
+  if (wmi.length !== 3) return null;
+  if (vds.length !== 6) return null;
+  if (vis.length !== 8) return null;
+
+  return wmi + vds + vis;
 }
