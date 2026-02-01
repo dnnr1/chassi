@@ -49,3 +49,58 @@ export interface YearInfo {
   mostLikelyYear: number | null;
   confidence: number;
 }
+
+/**
+ * VIN components
+ */
+export interface VinComponents {
+  wmi: string;
+  vds: string;
+  vis: string;
+  checkDigit: string;
+  yearCode: string;
+  plantCode: string;
+  sequentialNumber: string;
+}
+
+/**
+ * Model inference result
+ */
+export interface ModelInference {
+  model: string | null;
+  confidence: number;
+  source: string;
+  matchedPattern?: string;
+  additionalInfo?: Record<string, string>;
+}
+
+/**
+ * Full VIN decode result
+ */
+export interface VinDecodeResult {
+  vin: string;
+  valid: boolean;
+  manufacturer: string | null;
+  country: string | null;
+  countryCode: string | null;
+  year: number | null;
+  possibleYears: number[];
+  model: string | null;
+  confidence: number;
+  components?: VinComponents;
+  disclaimer: string;
+}
+
+/**
+ * Decode options
+ */
+export interface DecodeOptions {
+  strict?: boolean;
+  includeComponents?: boolean;
+}
+
+/**
+ * Default disclaimer message
+ */
+export const DEFAULT_DISCLAIMER =
+  "The returned data is inferred and unofficial. For official information, consult DENATRAN or the manufacturer.";

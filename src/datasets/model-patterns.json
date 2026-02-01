@@ -1,152 +1,71 @@
 {
-    "metadata":  {
-                     "description":  "VDS patterns for model inference",
-                     "note":  "Unofficial data based on observed patterns"
-                 },
-    "patterns":  {
-                     "9BW":  {
-                                 "ZZZ37":  {
-                                               "model":  "Gol",
-                                               "confidence":  0.8
-                                           },
-                                 "ZZZ6R":  {
-                                               "model":  "Fox",
-                                               "confidence":  0.8
-                                           },
-                                 "2G1":  {
-                                             "model":  "Saveiro",
-                                             "confidence":  0.75
-                                         },
-                                 "CA11":  {
-                                              "model":  "Virtus",
-                                              "confidence":  0.8
-                                          },
-                                 "CA21":  {
-                                              "model":  "Polo",
-                                              "confidence":  0.8
-                                          },
-                                 "BU2":  {
-                                             "model":  "T-Cross",
-                                             "confidence":  0.8
-                                         }
-                             },
-                     "9BG":  {
-                                 "JB":  {
-                                            "model":  "Onix",
-                                            "confidence":  0.75
-                                        },
-                                 "JC":  {
-                                            "model":  "Onix Plus",
-                                            "confidence":  0.75
-                                        },
-                                 "RJ":  {
-                                            "model":  "Tracker",
-                                            "confidence":  0.8
-                                        },
-                                 "SK":  {
-                                            "model":  "S10",
-                                            "confidence":  0.8
-                                        }
-                             },
-                     "9BD":  {
-                                 "195":  {
-                                             "model":  "Argo",
-                                             "confidence":  0.8
-                                         },
-                                 "196":  {
-                                             "model":  "Cronos",
-                                             "confidence":  0.8
-                                         },
-                                 "225":  {
-                                             "model":  "Mobi",
-                                             "confidence":  0.8
-                                         },
-                                 "323":  {
-                                             "model":  "Toro",
-                                             "confidence":  0.8
-                                         },
-                                 "372":  {
-                                             "model":  "Strada",
-                                             "confidence":  0.8
-                                         }
-                             },
-                     "93H":  {
-                                 "FB2":  {
-                                             "model":  "Civic",
-                                             "confidence":  0.8
-                                         },
-                                 "GK5":  {
-                                             "model":  "Fit",
-                                             "confidence":  0.8
-                                         },
-                                 "RU":  {
-                                            "model":  "HR-V",
-                                            "confidence":  0.8
-                                        },
-                                 "CR":  {
-                                            "model":  "CR-V",
-                                            "confidence":  0.8
-                                        }
-                             },
-                     "9BR":  {
-                                 "53":  {
-                                            "model":  "Corolla",
-                                            "confidence":  0.8
-                                        },
-                                 "C7":  {
-                                            "model":  "Corolla Cross",
-                                            "confidence":  0.8
-                                        },
-                                 "FZ":  {
-                                            "model":  "Hilux",
-                                            "confidence":  0.8
-                                        },
-                                 "KA":  {
-                                            "model":  "Yaris",
-                                            "confidence":  0.8
-                                        }
-                             },
-                     "93Y":  {
-                                 "B4A":  {
-                                             "model":  "Kwid",
-                                             "confidence":  0.8
-                                         },
-                                 "HJD":  {
-                                             "model":  "Duster",
-                                             "confidence":  0.8
-                                         },
-                                 "RFB":  {
-                                             "model":  "Sandero",
-                                             "confidence":  0.8
-                                         },
-                                 "HHA":  {
-                                             "model":  "Captur",
-                                             "confidence":  0.8
-                                         }
-                             },
-                     "93W":  {
-                                 "SX2":  {
-                                             "model":  "Creta",
-                                             "confidence":  0.8
-                                         },
-                                 "HB20":  {
-                                              "model":  "HB20",
-                                              "confidence":  0.8
-                                          }
-                             },
-                     "9BJ":  {
-                                 "MP":  {
-                                            "model":  "Compass",
-                                            "confidence":  0.8
-                                        },
-                                 "M6":  {
-                                            "model":  "Commander",
-                                            "confidence":  0.8
-                                        },
-                                 "BU":  {
-                                            "model":  "Renegade",
-                                            "confidence":  0.8
-                                        }
-                             }
-                 }
+  "metadata": {
+    "description": "VDS patterns for vehicle model inference",
+    "source": "Unofficial - based on observed patterns",
+    "disclaimer": "This data is not official. Always verify with manufacturer."
+  },
+  "patterns": {
+    "9BW": {
+      "ZZZ37": { "model": "Gol", "generation": "G5/G6", "confidence": 0.8 },
+      "ZZZ6R": { "model": "Fox", "confidence": 0.8 },
+      "2G1": { "model": "Saveiro", "confidence": 0.75 },
+      "CA11": { "model": "Virtus", "confidence": 0.8 },
+      "CA21": { "model": "Polo", "confidence": 0.8 },
+      "BU2": { "model": "T-Cross", "confidence": 0.8 },
+      "AU2": { "model": "Nivus", "confidence": 0.8 },
+      "BN2": { "model": "Taos", "confidence": 0.8 }
+    },
+    "9BG": {
+      "JB": { "model": "Onix", "confidence": 0.75 },
+      "JC": { "model": "Onix Plus", "confidence": 0.75 },
+      "RJ": { "model": "Tracker", "confidence": 0.8 },
+      "SK": { "model": "S10", "confidence": 0.8 },
+      "48": { "model": "Spin", "confidence": 0.75 },
+      "E7": { "model": "Equinox", "confidence": 0.8 }
+    },
+    "9BD": {
+      "195": { "model": "Argo", "confidence": 0.8 },
+      "196": { "model": "Cronos", "confidence": 0.8 },
+      "225": { "model": "Mobi", "confidence": 0.8 },
+      "323": { "model": "Toro", "confidence": 0.8 },
+      "372": { "model": "Strada", "confidence": 0.8 },
+      "138": { "model": "Uno", "confidence": 0.75 },
+      "327": { "model": "Pulse", "confidence": 0.8 },
+      "348": { "model": "Fastback", "confidence": 0.8 }
+    },
+    "93H": {
+      "FB2": { "model": "Civic", "confidence": 0.8 },
+      "GK5": { "model": "Fit", "confidence": 0.8 },
+      "RU": { "model": "HR-V", "confidence": 0.8 },
+      "CR": { "model": "CR-V", "confidence": 0.8 },
+      "GM6": { "model": "City", "confidence": 0.8 },
+      "RW": { "model": "WR-V", "confidence": 0.8 }
+    },
+    "9BR": {
+      "53": { "model": "Corolla", "confidence": 0.8 },
+      "C7": { "model": "Corolla Cross", "confidence": 0.8 },
+      "FZ": { "model": "Hilux", "confidence": 0.8 },
+      "KA": { "model": "Yaris", "confidence": 0.8 },
+      "GA": { "model": "SW4", "confidence": 0.8 },
+      "MA": { "model": "RAV4", "confidence": 0.8 }
+    },
+    "93Y": {
+      "B4A": { "model": "Kwid", "confidence": 0.8 },
+      "HJD": { "model": "Duster", "confidence": 0.8 },
+      "RFB": { "model": "Sandero", "confidence": 0.8 },
+      "HHA": { "model": "Captur", "confidence": 0.8 },
+      "LJL": { "model": "Logan", "confidence": 0.8 },
+      "XJK": { "model": "Oroch", "confidence": 0.75 }
+    },
+    "93W": {
+      "HB20": { "model": "HB20", "confidence": 0.8 },
+      "SX2": { "model": "Creta", "confidence": 0.8 },
+      "TM": { "model": "Tucson", "confidence": 0.8 }
+    },
+    "9BJ": {
+      "BU": { "model": "Renegade", "confidence": 0.8 },
+      "MP": { "model": "Compass", "confidence": 0.8 },
+      "M6": { "model": "Commander", "confidence": 0.8 }
+    }
+  }
 }
