@@ -1,6 +1,6 @@
 {
   "name": "chassi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Offline VIN decoder library for Brazilian vehicles",
   "keywords": [
     "chassi",
