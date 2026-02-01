@@ -3,16 +3,16 @@ export {
   normalizeVin,
   isValidVinStructure,
   validateVin,
-  isValidVin
-} from './core/validateVin';
+  isValidVin,
+} from "./core/validateVin";
 
 // Check digit functions
 export {
   calculateCheckDigit,
   verifyCheckDigit,
   extractCheckDigit,
-  transliterateChar
-} from './core/checkDigit';
+  transliterateChar,
+} from "./core/checkDigit";
 
 // VIN parsing functions
 export {
@@ -23,8 +23,8 @@ export {
   extractYearCode,
   extractPlantCode,
   extractSequentialNumber,
-  reconstructVin
-} from './core/parseVin';
+  reconstructVin,
+} from "./core/parseVin";
 
 // Decoder functions
 export {
@@ -33,24 +33,24 @@ export {
   decodeManufacturer,
   decodeYear,
   isBrazilianVin,
-  listKnownManufacturers
-} from './decoder/decode';
+  listKnownManufacturers,
+} from "./decoder/decode";
 
 // Model inference functions
 export {
   inferModel,
   listKnownModels,
   hasModelPatterns,
-  getModelPatternsMetadata
-} from './decoder/inferModel';
+  getModelPatternsMetadata,
+} from "./decoder/inferModel";
 
 // Confidence calculation functions
 export {
   calculateConfidenceScore,
   calculateYearConfidence,
   calculateModelConfidence,
-  combineConfidenceScores
-} from './decoder/confidenceScore';
+  combineConfidenceScores,
+} from "./decoder/confidenceScore";
 
 // Type exports
 export type {
@@ -61,10 +61,10 @@ export type {
   YearInfo,
   VinComponents,
   ModelInference,
-  ModelPattern,
+
   VinDecodeResult,
-  DecodeOptions
-} from './types';
+  DecodeOptions,
+} from "./types";
 
 // Constants
-export { DEFAULT_DISCLAIMER } from './types';
+export { DEFAULT_DISCLAIMER } from "./types";
