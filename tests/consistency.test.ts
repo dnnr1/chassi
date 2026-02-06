@@ -77,12 +77,8 @@ describe("Consistency between validateVin and decodeVin", () => {
           const validation = validateVin(vin);
           const decode = decodeVin(vin);
 
-          if (valid) {
-            expect(validation.valid).toBe(true);
-            expect(decode.valid).toBe(true);
-          } else {
-            expect(validation.valid).toBe(false);
-          }
+          expect(validation.valid).toBe(valid);
+          expect(decode.valid).toBe(valid);
         });
 
         it("should mark check digit as applicable for North American VIN", () => {
