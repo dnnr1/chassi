@@ -72,19 +72,52 @@ npx chassi decode WVWZZZ3CZWE123456
 #   WMI:        WVW
 #   VDS:        ZZZ3CZ
 #   VIS:        WE123456
+#   Year Code:  W
+#   Plant Code: E
+#   Sequential: 123456
 ```
 
 ```bash
-npx chassi validate 5YJ3E1EA5LF123456
+npx chassi validate WVWZZZ3CZWE123456
 
 # === VIN Validation Result ===
 #
-# VIN:           5YJ3E1EA5LF123456
+# VIN:           WVWZZZ3CZWE123456
 # Valid:         Yes
-# Length:        Valid (17 characters)
-# Characters:    Valid
-# Check Digit:   Valid (5)
+# Length OK:     Yes
+# Characters OK: Yes
+# Check Digit:   Valid
 ```
+
+```bash
+npx chassi check 1HGBH41JXMN109186
+
+# === Check Digit Verification ===
+#
+# VIN:        1HGBH41JXMN109186
+# Provided:   X
+# Calculated: X
+# Applicable: Yes (North American)
+# Valid:      Yes
+```
+
+#### CLI Fields
+
+| Field         | Command               | Description                                                                               |
+| ------------- | --------------------- | ----------------------------------------------------------------------------------------- |
+| VIN           | all                   | The normalized (uppercase) VIN                                                            |
+| Valid         | decode/validate/check | Whether the VIN passes all applicable validations                                         |
+| Manufacturer  | decode                | Manufacturer name or "Unknown"                                                            |
+| Country       | decode                | Country of origin or "Unknown"                                                            |
+| Year          | decode                | Most likely model year or "Unknown"                                                       |
+| Model         | decode                | Inferred model or "Unknown"                                                               |
+| Confidence    | decode                | How much data was matched (0-100%)                                                        |
+| Length OK     | validate              | Whether the VIN has exactly 17 characters                                                 |
+| Characters OK | validate              | Whether all characters are valid (no I, O, Q, or special chars)                           |
+| Check Digit   | validate              | Whether the check digit at position 9 is correct                                          |
+| Provided      | check                 | The character at position 9 of the VIN                                                    |
+| Calculated    | check                 | The expected check digit per ISO 3779 weighted sum mod 11                                 |
+| Applicable    | check                 | Whether check digit validation applies — only North American VINs (US, CA, MX) require it |
 
 ## VIN Structure
 
@@ -96,6 +129,68 @@ npx chassi validate 5YJ3E1EA5LF123456
 | 10       | Year  | Model year code               |
 | 11       | Plant | Assembly plant                |
 | 12-17    | Seq   | Sequential number             |
+
+## API Reference
+
+### `decodeVin(vin, options?)`
+
+Returns decoded vehicle information from the VIN.
+
+| Field           | Type       | Description                                                                     |
+| --------------- | ---------- | ------------------------------------------------------------------------------- |
+| `vin`           | `string`   | The original VIN provided                                                       |
+| `valid`         | `boolean`  | Whether the VIN passes all applicable validations (structure + check digit)     |
+| `manufacturer`  | `string?`  | Manufacturer name (e.g. `"Volkswagen"`)                                         |
+| `country`       | `string?`  | Country of origin (e.g. `"Germany"`)                                            |
+| `countryCode`   | `string?`  | ISO country code (e.g. `"DE"`)                                                  |
+| `year`          | `number?`  | Most likely model year                                                          |
+| `possibleYears` | `number[]` | All possible model years (year codes cycle every 30 years)                      |
+| `model`         | `string?`  | Inferred model name, if a known VDS pattern matches                             |
+| `confidence`    | `number`   | Confidence score from `0` to `1` based on how much data was matched             |
+| `components`    | `object?`  | VIN components (WMI, VDS, VIS, etc.). Only present if `includeComponents: true` |
+| `disclaimer`    | `string`   | Legal disclaimer about the inferred data                                        |
+
+**Options:**
+
+| Option              | Type      | Default | Description                                        |
+| ------------------- | --------- | ------- | -------------------------------------------------- |
+| `strict`            | `boolean` | `false` | Reject VINs with invalid check digit (even non-NA) |
+| `includeComponents` | `boolean` | `false` | Include parsed VIN components in the result        |
+
+### `validateVin(vin, options?)`
+
+Returns detailed validation results for a VIN.
+
+| Field                          | Type      | Description                                                 |
+| ------------------------------ | --------- | ----------------------------------------------------------- |
+| `valid`                        | `boolean` | Whether the VIN passes all applicable validations           |
+| `vin`                          | `string`  | The original VIN provided                                   |
+| `normalizedVin`                | `string`  | Uppercase, stripped of spaces and dashes                    |
+| `errors`                       | `array`   | List of validation errors (see below)                       |
+| `details.lengthValid`          | `boolean` | Whether the VIN has exactly 17 characters                   |
+| `details.charactersValid`      | `boolean` | Whether all characters are valid (A-H, J-N, P, R-Z, 0-9)    |
+| `details.checkDigitValid`      | `boolean` | Whether the check digit (position 9) is correct             |
+| `details.checkDigitApplicable` | `boolean` | Whether check digit validation applies to this VIN's region |
+| `details.providedCheckDigit`   | `string?` | The check digit character found at position 9               |
+| `details.calculatedCheckDigit` | `string?` | The expected check digit calculated via ISO 3779            |
+
+**Options:**
+
+| Option             | Type      | Default | Description                                               |
+| ------------------ | --------- | ------- | --------------------------------------------------------- |
+| `strictCheckDigit` | `boolean` | `false` | When `true`, enforces check digit validation for all VINs |
+
+> **Check digit applicability:** North American vehicles (US, CA, MX) require check digit validation per 49 CFR § 565. European and other regions do not use the ISO 3779 check digit system, so the check digit position may contain any valid character. When `checkDigitApplicable` is `false`, the check digit is not validated and `checkDigitValid` is always `true`.
+
+### Error Codes
+
+| Code                  | Description                                       |
+| --------------------- | ------------------------------------------------- |
+| `VIN_EMPTY`           | No VIN was provided                               |
+| `INVALID_LENGTH`      | VIN does not have exactly 17 characters           |
+| `FORBIDDEN_CHARACTER` | VIN contains I, O, or Q (not allowed by ISO 3779) |
+| `INVALID_CHARACTER`   | VIN contains a character outside A-HJ-NPR-Z0-9    |
+| `INVALID_CHECK_DIGIT` | Check digit at position 9 does not match expected |
 
 ## Data Sources
 

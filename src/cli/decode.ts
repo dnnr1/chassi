@@ -2,7 +2,7 @@
 import { decodeVin } from "../decoder/decode";
 import { validateVin } from "../core/validateVin";
 import { parseVin } from "../core/parseVin";
-import { verifyCheckDigit, calculateCheckDigit } from "../core/checkDigit";
+import { calculateCheckDigit } from "../core/checkDigit";
 
 const args = process.argv.slice(2);
 const command = args[0];
@@ -123,9 +123,10 @@ switch (command) {
   }
 
   case "check": {
-    const isValid = verifyCheckDigit(normalizedVin);
+    const validation = validateVin(normalizedVin);
     const calculated = calculateCheckDigit(normalizedVin);
     const provided = normalizedVin.length >= 9 ? normalizedVin[8] : "N/A";
+    const applicable = validation.details.checkDigitApplicable !== false;
 
     console.log("");
     console.log("=== Check Digit Verification ===");
@@ -133,7 +134,12 @@ switch (command) {
     console.log(`VIN:        ${normalizedVin}`);
     console.log(`Provided:   ${provided}`);
     console.log(`Calculated: ${calculated || "Could not calculate"}`);
-    console.log(`Valid:      ${isValid ? "Yes" : "No"}`);
+    console.log(
+      `Applicable: ${applicable ? "Yes (North American)" : "No (non-North American)"}`,
+    );
+    console.log(
+      `Valid:      ${validation.details.checkDigitValid ? "Yes" : "No"}`,
+    );
     break;
   }
 

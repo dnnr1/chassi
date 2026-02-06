@@ -8,8 +8,7 @@ import {
   DEFAULT_DISCLAIMER,
 } from "../types";
 import { parseVin } from "../core/parseVin";
-import { verifyCheckDigit } from "../core/checkDigit";
-import { normalizeVin } from "../core/validateVin";
+import { validateVin } from "../core/validateVin";
 import { inferModel } from "./inferModel";
 import { calculateConfidenceScore } from "./confidenceScore";
 
@@ -89,8 +88,12 @@ export function decodeVin(
     };
   }
 
-  const checkDigitValid = verifyCheckDigit(vin);
-  if (options.strict && !checkDigitValid) {
+  const validation = validateVin(vin, {
+    strictCheckDigit: options.strict,
+  });
+  const vinIsValid = validation.valid;
+
+  if (options.strict && !vinIsValid) {
     return {
       vin,
       valid: false,
@@ -110,7 +113,7 @@ export function decodeVin(
   const modelInfo = inferModel(parsed.wmi, parsed.vds);
 
   const confidence = calculateConfidenceScore({
-    vinValid: true,
+    vinValid: vinIsValid,
     wmiFound:
       manufacturerInfo !== null && manufacturerInfo.manufacturer !== "Unknown",
     vdsPatternFound: modelInfo.model !== null,
@@ -118,7 +121,7 @@ export function decodeVin(
 
   const result: VinDecodeResult = {
     vin,
-    valid: true,
+    valid: vinIsValid,
     manufacturer: manufacturerInfo?.manufacturer || null,
     country: manufacturerInfo?.country || null,
     countryCode: manufacturerInfo?.countryCode || null,
