@@ -1,6 +1,4 @@
-function round2(n: number): number {
-  return Math.round(n * 100) / 100;
-}
+import round2 from "../utils/round2";
 
 /** Weighted confidence: VIN valid (35%), WMI found (35%), VDS pattern (30%). */
 export function calculateConfidenceScore(factors: {
